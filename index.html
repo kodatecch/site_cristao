@@ -152,11 +152,9 @@
   .hero{ background:var(--cream); padding:104px 0 90px; }
   .hero-grid{
     display:grid;
-    grid-template-columns:1fr;
-    gap:40px;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
     align-items:center;
-    text-align:center;
-    justify-items:center;
   }
   .hero-eyebrow{
     font-family:var(--font-stamp);
@@ -182,12 +180,12 @@
     font-size:17.5px;
     line-height:1.6;
     color:var(--text-dim);
-    max-width:600px;
-    margin:0 auto 30px;
+    max-width:500px;
+    margin-bottom:30px;
   }
   .hero-ctas{ margin-bottom:24px; }
-  .hero-facts{ display:flex; gap:26px; flex-wrap:wrap; justify-content:center; }
-  .hero-facts div{ border-left:2px solid var(--red); padding-left:10px; text-align:left; }
+  .hero-facts{ display:flex; gap:26px; flex-wrap:wrap; }
+  .hero-facts div{ border-left:2px solid var(--red); padding-left:10px; }
   .hero-facts b{ font-family:var(--font-display); font-size:26px; font-weight:700; display:block; line-height:1; }
   .hero-facts span{ font-family:var(--font-stamp); font-size:11px; font-weight:700; color:var(--text-dim); text-transform:uppercase; }
 
@@ -558,6 +556,10 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap hero-grid">
+    <div class="product-collage" style="justify-content: flex-end; width: 100%;">
+      <img src="capa_site.png" alt="100 Dias com Meu Filho" style="width:140%; max-width:1000px; height:auto; margin-left:-40%; mix-blend-mode: multiply;">
+    </div>
+
     <div>
       <span class="hero-eyebrow">🌱👨‍👩‍👧 Para pais e mães que querem estar mais presentes</span>
       <h1>Você ama seu filho ❤️. Só queria que a rotina desse mais <em>espaço</em> pra mostrar isso 🕰️.</h1>
@@ -570,10 +572,6 @@
         <div><b>05</b><span>Bônus inclusos 🎁</span></div>
         <div><b>Já</b><span>Acesso imediato ⚡</span></div>
       </div>
-    </div>
-
-    <div class="product-collage" style="justify-content: center; width: 100%;">
-      <img src="capa_site.png" alt="100 Dias com Meu Filho" style="width:100%; max-width:1000px; height:auto; mix-blend-mode: multiply;">
     </div>
   </div>
 </section>
