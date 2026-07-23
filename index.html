@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>100 Dias com Meu Filho — Um convite para se aproximar</title>
+<title>90 Dias com Meu Filho — Um convite para se aproximar</title>
 <link rel="icon" type="image/png" href="capa_produto_principal.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -383,7 +383,7 @@
 
   /* ===== BONUS ===== */
   .bonus{ background:var(--cream-deep); }
-  .bonus-grid{ margin-top:40px; display:flex; flex-wrap:wrap; justify-content:center; gap:16px; }
+  .bonus-grid{ margin-top:40px; display:flex; flex-wrap:wrap; justify-content:center; gap:16px; align-items:stretch; }
   .bonus-card{
     flex: 0 1 calc(33.333% - 11px);
     min-width: 300px;
@@ -391,6 +391,11 @@
     border:1px solid var(--line);
     padding:22px 24px;
     display:flex; gap:16px;
+  }
+  .bonus-card > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
   .bonus-photo{
     width:145px; height:auto; flex-shrink:0;
@@ -406,7 +411,7 @@
   }
   .bonus-card h4{ font-family:var(--font-display); font-size:18px; font-weight:600; margin-bottom:7px; line-height:1.2;}
   .bonus-card p{ font-size:14px; color:var(--text-dim); line-height:1.55; margin-bottom:12px;}
-  .price-row{ display:flex; align-items:center; gap:10px; }
+  .price-row{ margin-top:auto; display:flex; align-items:center; gap:10px; }
   .price-old{ font-family:var(--font-stamp); font-size:13px; font-weight:700; text-decoration:line-through; opacity:0.55;}
   .price-free{
     font-family:var(--font-stamp); font-size:12px; font-weight:800; text-transform:uppercase;
@@ -560,19 +565,19 @@
     <div>
       <span class="hero-eyebrow">🌱👨‍👩‍👧 Para pais e mães que querem estar mais presentes</span>
       <h1>Você ama seu filho ❤️. Só queria que a rotina desse mais <em>espaço</em> pra mostrar isso 🕰️.</h1>
-      <p class="lede">Um desafio diário de 100 dias 📅 para pais cristãos ✝️ que querem se aproximar do coração dos filhos — na fé e no dia a dia, um passo pequeno de cada vez.</p>
+      <p class="lede">Um desafio diário de 90 dias 📅 para pais cristãos ✝️ que querem se aproximar do coração dos filhos — na fé e no dia a dia, um passo pequeno de cada vez.</p>
       <div class="hero-ctas">
         <button class="btn" onclick="document.getElementById('oferta').scrollIntoView({behavior: 'smooth'})">Quero começar hoje →</button>
       </div>
       <div class="hero-facts">
-        <div><b>100</b><span>Dias de caminhada 🚶‍♂️</span></div>
+        <div><b>90</b><span>Dias de caminhada 🚶‍♂️</span></div>
         <div><b>05</b><span>Bônus inclusos 🎁</span></div>
         <div><b>Já</b><span>Acesso imediato ⚡</span></div>
       </div>
     </div>
 
     <div class="product-collage" style="justify-content: flex-start; width: 100%;">
-      <img src="capa_site.png" alt="100 Dias com Meu Filho" style="width:120%; max-width:900px; height:auto; margin-right:-20%; mix-blend-mode: multiply;">
+      <img src="capa_site.png" alt="90 Dias com Meu Filho" style="width:120%; max-width:900px; height:auto; margin-right:-20%; mix-blend-mode: multiply;">
     </div>
   </div>
 </section>
@@ -630,7 +635,7 @@
         <p class="pm-verse">Um registro para guardar e reler mais tarde.</p>
       </div>
       <div class="carousel-img page-mock">
-        <span class="pm-tag">Dia 100</span>
+        <span class="pm-tag">Dia 90</span>
         <span class="pm-title">A nossa nova história</span>
         <div class="pm-line w80"></div>
         <div class="pm-line w80"></div>
@@ -670,7 +675,7 @@
     <div class="ledger-sheet punch-list" style="position:relative;">
       <span class="corner-emoji left">👨‍👩‍👧</span>
       <span class="corner-emoji right">👨‍👩‍👦</span>
-      <div class="ledger-row"><span class="name">Desafios diários guiados, do dia 1 ao dia 100 🗓️</span><span class="mark">✓ incluso</span></div>
+      <div class="ledger-row"><span class="name">Desafios diários guiados, do dia 1 ao dia 90 🗓️</span><span class="mark">✓ incluso</span></div>
       <div class="ledger-row"><span class="name">Devocionais curtos para viver a fé em casa 📖</span><span class="mark">✓ incluso</span></div>
       <div class="ledger-row"><span class="name">Perguntas que abrem conversas difíceis 🗣️</span><span class="mark">✓ incluso</span></div>
       <div class="ledger-row"><span class="name">Orações guiadas para fazer junto com seu filho 🙏</span><span class="mark">✓ incluso</span></div>
@@ -688,7 +693,7 @@
 <section class="depo">
   <div class="wrap">
     <div class="sec-head center">
-      <span class="sec-tab">❤️ Famílias que já vivem os 100 dias</span>
+      <span class="sec-tab">❤️ Famílias que já vivem os 90 dias</span>
       <h2 class="sec-title">Histórias de vínculos que voltaram a florescer 🌱✨</h2>
     </div>
   </div>
@@ -696,37 +701,37 @@
   <div class="bleed">
     <div class="depo-track" id="depoCarousel">
       <div class="depo-card punch">
-        <div class="depo-photo"><div style="width:100%; height:100%; background:var(--blue); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:24px;">R</div></div>
+        <div class="depo-photo"><img src="gente1.jpg" alt="Rafael A." style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
         <div class="stars">❤️❤️❤️❤️❤️</div>
         <p class="quote">"Meu filho de 14 anos me abraçou sem eu pedir, pela primeira vez em meses. Foi no dia 20 do desafio."</p>
         <div class="depo-meta"><b>Rafael A.</b><span>Pai de 2 filhos, SP</span></div>
       </div>
       <div class="depo-card punch">
-        <div class="depo-photo"><div style="width:100%; height:100%; background:var(--red); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:24px;">D</div></div>
+        <div class="depo-photo"><img src="pessoa1.jpg" alt="Débora M." style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
         <div class="stars">❤️❤️❤️❤️❤️</div>
         <p class="quote">"As orações guiadas resolveram meu maior medo, que era não saber o que dizer. Cada dia já vem pronto, é só viver junto."</p>
         <div class="depo-meta"><b>Débora M.</b><span>Mãe solo, PE</span></div>
       </div>
       <div class="depo-card punch">
-        <div class="depo-photo"><div style="width:100%; height:100%; background:var(--ochre); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:24px;">J</div></div>
+        <div class="depo-photo"><img src="gente2.jpg" alt="Julio K." style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
         <div class="stars">❤️❤️❤️❤️❤️</div>
         <p class="quote">"Começamos sem nenhum ritual em casa. No terceiro mês já tínhamos uma oração toda noite. Isso mudou o clima da nossa casa."</p>
         <div class="depo-meta"><b>Julio K.</b><span>Pai, PR</span></div>
       </div>
       <div class="depo-card punch">
-        <div class="depo-photo"><div style="width:100%; height:100%; background:var(--red-deep); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:24px;">M</div></div>
+        <div class="depo-photo"><img src="gente3.jpg" alt="Marcos T." style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
         <div class="stars">❤️❤️❤️❤️❤️</div>
         <p class="quote">"Eu sabia que queria estar mais presente, só não sabia por onde. O desafio tirou de mim a preguiça de pensar no que fazer."</p>
         <div class="depo-meta"><b>Marcos T.</b><span>Pai, MG</span></div>
       </div>
       <div class="depo-card punch">
-        <div class="depo-photo"><div style="width:100%; height:100%; background:var(--blue-deep); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:24px;">C</div></div>
+        <div class="depo-photo"><img src="pessoa2.jpg" alt="Carla S." style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
         <div class="stars">❤️❤️❤️❤️❤️</div>
         <p class="quote">"Comecei sem muita expectativa. Hoje meu filho me pergunta se já é hora do desafio do dia. Isso já valeu tudo."</p>
         <div class="depo-meta"><b>Carla S.</b><span>Mãe, RS</span></div>
       </div>
       <div class="depo-card punch">
-        <div class="depo-photo"><div style="width:100%; height:100%; background:#8FA07E; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:24px;">A</div></div>
+        <div class="depo-photo"><img src="pessoa3.jpg" alt="Ana P." style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
         <div class="stars">❤️❤️❤️❤️❤️</div>
         <p class="quote">"Minha filha adolescente guardou as cartas do desafio numa caixinha. Isso, pra mim, já valeu cada dia."</p>
         <div class="depo-meta"><b>Ana P.</b><span>Mãe, BA</span></div>
@@ -809,7 +814,7 @@
       <div class="lbl">Valor total dos bônus:</div>
       <div class="old">R$153</div>
       <div class="free-badge">🙏 Hoje: sem custo</div>
-      <div class="note">Inclusos para quem começa os 100 dias agora.</div>
+      <div class="note">Inclusos para quem começa os 90 dias agora.</div>
     </div>
   </div>
 </section>
@@ -826,11 +831,11 @@
     <div class="plans-grid">
       <div class="plan-card punch">
         <div class="plan-name">Caminho Básico</div>
-        <div class="plan-price"><span class="old">R$47</span><span class="new" style="color:var(--ink);">R$17</span></div>
+        <div class="plan-price"><span class="old">R$47</span><span class="new" style="color:var(--ink);">R$9,90</span></div>
         <span class="plan-terms" style="color:var(--text-dim); background:var(--cream-deep);">Pagamento único</span>
 
         <ul class="plan-list">
-          <li><span class="li-mark">✓</span>100 Dias com Meu Filho (desafio completo)</li>
+          <li><span class="li-mark">✓</span>90 Dias com Meu Filho (desafio completo)</li>
           <li class="off"><span class="li-mark off">×</span>Playlist de louvor para ouvir juntos</li>
           <li class="off"><span class="li-mark off">×</span>100 perguntas para fazer no carro</li>
           <li class="off"><span class="li-mark off">×</span>Modelo de oração por idade do filho</li>
@@ -845,11 +850,11 @@
       <div class="plan-card featured punch">
         <span class="approved">Mais escolhido</span>
         <div class="plan-name">Caminho Completo</div>
-        <div class="plan-price"><span class="old">R$97</span><span class="new">R$27</span></div>
+        <div class="plan-price"><span class="old">R$97</span><span class="new">R$17,90</span></div>
         <span class="plan-terms">Pagamento único · Acesso imediato</span>
 
         <ul class="plan-list">
-          <li><span class="li-mark">✓</span>100 Dias com Meu Filho (desafio completo)</li>
+          <li><span class="li-mark">✓</span>90 Dias com Meu Filho (desafio completo)</li>
           <li><span class="li-mark">✓</span>Playlist de louvor <span class="tag">BÔNUS</span></li>
           <li><span class="li-mark">✓</span>100 perguntas para o carro <span class="tag">BÔNUS</span></li>
           <li><span class="li-mark">✓</span>Modelo de oração por idade <span class="tag">BÔNUS</span></li>
@@ -922,7 +927,7 @@
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="wrap">
-    <h2><span class="line1">"Que em 100 dias 💯, seu filho</span><span class="line2">sinta que você esteve ali de verdade ❤️."</span></h2>
+    <h2><span class="line1">"Que em 90 dias 💯, seu filho</span><span class="line2">sinta que você esteve ali de verdade ❤️."</span></h2>
     <button class="btn" onclick="document.getElementById('oferta').scrollIntoView({behavior: 'smooth'})">Quero começar hoje →</button>
     <p class="final-legal"><strong>Este site</strong> não tem vínculo com Facebook, Instagram ou Meta.</p>
   </div>
@@ -1012,10 +1017,10 @@
   <div class="modal-content punch" style="background:var(--paper); padding:40px; max-width:500px; width:100%; border:2px solid var(--ink); box-shadow:8px 8px 0 var(--ink); position:relative; margin:auto; border-radius:14px;">
     <button onclick="document.getElementById('upsellModal').style.display='none'" style="position:absolute; top:15px; right:15px; font-size:24px; font-weight:bold; color:var(--text-dim);">&times;</button>
     <h3 style="font-family:var(--font-display); font-weight:600; font-size:32px; color:var(--red); margin-bottom:12px; line-height:1;">Antes de você ir</h3>
-    <p style="font-size:16px; color:var(--text-dim); margin-bottom:24px; line-height:1.6; font-weight:500;">Leve o <strong>Caminho Completo</strong> (com todos os bônus) por apenas <strong style="color:var(--ink); font-size:22px;">R$12</strong> em vez de <span style="text-decoration:line-through;">R$27</span> — para começar hoje.</p>
+    <p style="font-size:16px; color:var(--text-dim); margin-bottom:24px; line-height:1.6; font-weight:500;">Leve o <strong>Caminho Completo</strong> (com todos os bônus) por apenas <strong style="color:var(--ink); font-size:22px;">R$13,90</strong> em vez de <span style="text-decoration:line-through;">R$17,90</span> — para começar hoje.</p>
     
-    <a href="#" class="btn block" style="margin-bottom:16px; width:100%;">Sim, quero começar por R$12</a>
-    <a href="#" onclick="document.getElementById('upsellModal').style.display='none'; return false;" style="display:block; text-align:center; font-family:var(--font-stamp); font-size:13px; font-weight:700; color:var(--text-dim); text-decoration:underline;">Prefiro continuar com o Caminho Básico por R$17.</a>
+    <a href="#" class="btn block" style="margin-bottom:16px; width:100%;">Sim, quero começar por R$13,90</a>
+    <a href="#" onclick="document.getElementById('upsellModal').style.display='none'; return false;" style="display:block; text-align:center; font-family:var(--font-stamp); font-size:13px; font-weight:700; color:var(--text-dim); text-decoration:underline;">Prefiro continuar com o Caminho Básico por R$9,90.</a>
   </div>
 </div>
 
