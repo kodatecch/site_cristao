@@ -123,11 +123,11 @@
   .urgency-bar{
     background:var(--ink);
     color:var(--cream);
-    padding:10px 18px;
-    display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap;
+    padding:12px 20px;
+    display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;
     font-family:var(--font-stamp);
     font-weight:700;
-    font-size:13.5px;
+    font-size:15px;
     letter-spacing:0.01em;
     position:fixed; top:0; left:0; width:100%; z-index:100;
     border-bottom:2px solid var(--red);
@@ -135,18 +135,20 @@
   .urgency-bar .tag{
     background:var(--red);
     color:var(--cream);
-    padding:4px 11px;
+    padding:6px 14px;
     text-transform:uppercase;
-    border-radius:4px;
-    font-size:11px;
+    border-radius:6px;
+    font-size:14.5px;
+    font-weight:800;
   }
   .urgency-bar .clock{
     background:var(--cream);
     color:var(--ink);
     font-weight:800;
-    padding:4px 11px;
+    font-size:16.5px;
+    padding:6px 14px;
     border:1px solid var(--cream);
-    border-radius:4px;
+    border-radius:6px;
   }
 
   /* ===== HERO ===== */
@@ -253,17 +255,17 @@
   .sec-tab{
     display:inline-flex;
     align-items:center;
-    gap:8px;
+    gap:10px;
     font-family:var(--font-stamp);
-    font-size:12px;
+    font-size:14.5px;
     font-weight:800;
     letter-spacing:0.04em;
     text-transform:uppercase;
     background:var(--ink);
     color:var(--cream);
-    padding:6px 14px;
-    margin-bottom:16px;
-    border-radius:6px;
+    padding:8px 18px;
+    margin-bottom:18px;
+    border-radius:8px;
   }
   .sec-title{
     font-size:clamp(34px,4.2vw,48px);
@@ -503,27 +505,28 @@
   .plan-price .old{ font-family:var(--font-stamp); font-weight:700; text-decoration:line-through; opacity:0.5; font-size:20px;}
   .plan-price .new{ font-family:var(--font-display); font-weight:700; font-size:54px; color:var(--red);}
   .plan-terms{
-    display:inline-block; font-family:var(--font-stamp); font-size:11px; font-weight:800; text-transform:uppercase;
+    display:inline-block; font-family:var(--font-stamp); font-size:13.5px; font-weight:800; text-transform:uppercase;
     color:var(--blue-deep); background:var(--blue-wash);
-    padding:5px 12px; margin-bottom:22px; border-radius:4px;
+    padding:7px 15px; margin-bottom:24px; border-radius:6px;
   }
   .plan-list li{
-    display:flex; align-items:flex-start; gap:10px; font-size:14.5px; padding:10px 0; font-weight:600;
+    display:flex; align-items:flex-start; gap:12px; font-size:17.5px; padding:13px 0; font-weight:700;
     border-top:1px solid var(--line-soft);
+    line-height:1.45;
   }
   .plan-list li:first-child{ border-top:none; }
   .plan-list li.off{ color:#A39C8A; text-decoration:line-through; font-weight:500;}
-  .li-mark{ font-family:var(--font-stamp); font-size:14px; font-weight:800; flex-shrink:0; width:16px; color:var(--blue-deep);}
+  .li-mark{ font-family:var(--font-stamp); font-size:18px; font-weight:900; flex-shrink:0; width:22px; color:var(--blue-deep);}
   .li-mark.off{ color:#C4BCA9; }
   .plan-list .tag{
-    display:inline-block; font-family:var(--font-stamp); font-size:10px; font-weight:800;
+    display:inline-block; font-family:var(--font-stamp); font-size:13px; font-weight:800;
     background:var(--ochre); color:var(--ink);
-    padding:3px 6px; margin-left:6px; border-radius:4px; text-transform:uppercase; vertical-align:middle; line-height:1;
+    padding:4px 9px; margin-left:8px; border-radius:5px; text-transform:uppercase; vertical-align:middle; line-height:1;
   }
 
   .plan-cta-note{
     text-align:center; margin-top:12px;
-    font-family:var(--font-stamp); font-size:12px; font-weight:700; color:var(--red-deep);
+    font-family:var(--font-stamp); font-size:14.5px; font-weight:700; color:var(--red-deep);
   }
 
   /* ===== GARANTIA ===== */
@@ -533,14 +536,14 @@
     background:var(--paper); border:1px solid var(--line); padding:34px; border-radius:10px;
   }
   .guarantee-badge{
-    width:100px; height:100px; border:2px solid var(--blue-deep); border-radius:50%;
+    width:116px; height:116px; border:3px solid var(--blue-deep); border-radius:50%;
     display:flex; align-items:center; justify-content:center; flex-direction:column;
     color:var(--blue-deep); text-align:center; flex-shrink:0;
   }
-  .guarantee-badge b{ font-family:var(--font-display); font-weight:700; font-size:32px; line-height:1;}
-  .guarantee-badge span{ font-family:var(--font-stamp); font-weight:700; font-size:10px; letter-spacing:0.02em; text-transform:uppercase; margin-top:2px;}
-  .guarantee-box h3{ font-family:var(--font-display); font-weight:600; font-size:22px; margin-bottom:8px;}
-  .guarantee-box p{ font-size:15px; color:var(--text-dim); line-height:1.6; max-width:600px;}
+  .guarantee-badge b{ font-family:var(--font-display); font-weight:700; font-size:38px; line-height:1;}
+  .guarantee-badge span{ font-family:var(--font-stamp); font-weight:700; font-size:12px; letter-spacing:0.02em; text-transform:uppercase; margin-top:3px;}
+  .guarantee-box h3{ font-family:var(--font-display); font-weight:700; font-size:30px; margin-bottom:12px; line-height:1.25;}
+  .guarantee-box p{ font-size:17.5px; color:var(--text-dim); line-height:1.65; max-width:640px;}
   .guarantee-box strong{ color:var(--ink); }
 
   /* ===== FAQ ===== */
@@ -661,15 +664,17 @@
       padding: 14px 8px;
     }
     .ledger-row .name {
-      font-size: 15px;
+      font-size: 17px !important;
+      font-weight: 700;
       line-height: 1.4;
     }
     .ledger-row .mark {
-      font-size: 11.5px;
-      padding: 3px 8px;
+      font-size: 13.5px !important;
+      padding: 4px 10px !important;
       background: var(--blue-wash);
       border-radius: 4px;
       flex-shrink: 0;
+      font-weight: 800;
     }
 
     /* Depoimentos */
@@ -738,17 +743,22 @@
       padding: 4px 10px;
       transform: rotate(-5deg);
     }
-    .plan-name { font-size: 28px !important; font-weight: 700; }
-    .plan-price .new { font-size: 46px !important; }
+    .plan-name { font-size: 32px !important; font-weight: 700; }
+    .plan-price .new { font-size: 50px !important; }
     .plan-list li {
-      font-size: 15.5px;
-      line-height: 1.45;
-      padding: 10px 0;
+      font-size: 17.5px !important;
+      line-height: 1.5;
+      padding: 13px 0;
+      font-weight: 700;
+    }
+    .plan-list .tag {
+      font-size: 13px !important;
+      padding: 4px 8px !important;
     }
     .btn {
-      min-height: 54px;
-      font-size: 17.5px;
-      padding: 16px 24px;
+      min-height: 56px;
+      font-size: 18px !important;
+      padding: 18px 26px;
     }
 
     /* Garantia */
@@ -760,12 +770,23 @@
       gap: 20px;
     }
     .guarantee-box h3 {
-      font-size: 26px !important;
+      font-size: 28px !important;
       font-weight: 700;
+      line-height: 1.25 !important;
+    }
+    .guarantee-box p {
+      font-size: 17px !important;
+      line-height: 1.6;
     }
     .guarantee-badge {
-      width: 92px;
-      height: 92px;
+      width: 110px;
+      height: 110px;
+    }
+    .guarantee-badge b {
+      font-size: 36px !important;
+    }
+    .guarantee-badge span {
+      font-size: 11.5px !important;
     }
 
     /* FAQ */
@@ -773,13 +794,13 @@
       padding: 18px 16px 18px 38px;
     }
     .faq-item summary {
-      font-size: 18px !important;
+      font-size: 19px !important;
       line-height: 1.35;
       gap: 12px;
       font-weight: 700;
     }
     .faq-item p {
-      font-size: 15.5px;
+      font-size: 16.5px;
       line-height: 1.6;
     }
 
@@ -797,10 +818,10 @@
     .urgency-bar {
       padding: 8px 12px;
       gap: 8px;
-      font-size: 12px;
+      font-size: 13.5px;
     }
-    .urgency-bar .tag { font-size: 10.5px; padding: 3px 8px; }
-    .urgency-bar .clock { font-size: 12px; padding: 3px 8px; }
+    .urgency-bar .tag { font-size: 13px !important; padding: 5px 10px !important; font-weight: 800; }
+    .urgency-bar .clock { font-size: 14.5px !important; padding: 5px 10px !important; font-weight: 800; }
 
     .hero h1 { font-size: 34px !important; line-height: 1.16 !important; }
     .sec-title { font-size: 30px !important; line-height: 1.18 !important; }
