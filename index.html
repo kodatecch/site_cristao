@@ -885,7 +885,7 @@
 <!-- URGENCY BAR -->
 <div class="urgency-bar">
   <span class="tag">🕯️ Condição especial de lançamento até ⏳</span>
-  <span class="clock" id="mainClock">09:59:59</span>
+  <span class="clock" id="mainClock">10:00</span>
 </div>
 
 <!-- HERO -->
@@ -1232,14 +1232,18 @@
       const h = Math.floor(totalSeconds/3600);
       const m = Math.floor((totalSeconds%3600)/60);
       const s = totalSeconds%60;
-      el.textContent = String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+      if(h > 0){
+        el.textContent = String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+      } else {
+        el.textContent = String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+      }
       totalSeconds--;
     }
     tick();
     setInterval(tick,1000);
   }
-  startCountdown('mainClock', 9*3600 + 59*60 + 59);
-  startCountdown('btnClock', 3*60 + 10);
+  startCountdown('mainClock', 10 * 60);
+  startCountdown('btnClock', 10 * 60);
 
   function autoScroll(id, speed){
     const el = document.getElementById(id);
