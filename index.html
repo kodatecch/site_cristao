@@ -121,110 +121,145 @@
 
   /* ===== HEADER ===== */
   .urgency-bar{
-    background:var(--ink);
-    color:var(--cream);
-    padding:12px 20px;
-    display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;
-    font-family:var(--font-stamp);
-    font-weight:700;
-    font-size:15px;
-    letter-spacing:0.01em;
-    position:fixed; top:0; left:0; width:100%; z-index:100;
-    border-bottom:2px solid var(--red);
-  }
-  .urgency-bar .tag{
     background:var(--red);
     color:var(--cream);
-    padding:6px 14px;
-    text-transform:uppercase;
-    border-radius:6px;
+    padding:12px 20px;
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    font-family:var(--font-stamp);
+    font-weight:800;
     font-size:14.5px;
-    font-weight:800;
-  }
-  .urgency-bar .clock{
-    background:var(--cream);
-    color:var(--ink);
-    font-weight:800;
-    font-size:16.5px;
-    padding:6px 14px;
-    border:1px solid var(--cream);
-    border-radius:6px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    position:fixed; top:0; left:0; width:100%; z-index:100;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+    text-align:center;
   }
 
   /* ===== HERO ===== */
   .hero{ background:var(--cream); padding:104px 0 90px; }
-  .hero-grid{
-    display:grid;
-    grid-template-columns:1.05fr 0.95fr;
-    gap:20px 56px;
-    align-items:center;
-  }
-  .hero-text-col {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .hero-ctas {
-    grid-column: 1;
-    grid-row: 2;
-    margin-bottom: 24px;
-  }
-  .hero-facts {
-    grid-column: 1;
-    grid-row: 3;
+  .hero-content{
     display:flex;
-    gap:26px;
-    flex-wrap:wrap;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    margin:0 auto;
   }
-  .hero-eyebrow{
-    font-family:var(--font-stamp);
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:0.04em;
-    text-transform:uppercase;
-    color:var(--blue);
-    margin-bottom:14px;
-    display:block;
-    border-bottom:1px solid var(--line);
-    padding-bottom:10px;
-    max-width:390px;
+  .hero-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--blue-wash);
+    color: var(--blue-deep);
+    border: 1.5px solid rgba(92,110,82,0.35);
+    border-radius: 999px;
+    padding: 8px 22px;
+    font-family: var(--font-stamp);
+    font-size: 13.5px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 12px rgba(92,110,82,0.1);
   }
   .hero h1{
-    font-size:clamp(42px,5.5vw,60px);
+    font-family:var(--font-display);
+    font-size:clamp(36px,5.5vw,56px);
     line-height:1.15;
-    margin-bottom:20px;
+    margin-bottom:28px;
     color:var(--ink);
     font-weight:700;
+    text-align:center;
+    max-width:820px;
+    margin-left:auto;
+    margin-right:auto;
   }
-  .hero h1 em{ font-style:italic; color:var(--red); font-weight:600; }
   .hero p.lede{
     font-family:var(--font-body);
-    font-size:17.5px;
-    line-height:1.6;
-    color:var(--text-dim);
-    max-width:500px;
-    margin-bottom:30px;
+    font-size:clamp(17.5px, 4.3vw, 21px);
+    line-height:1.5;
+    color:var(--ink);
+    font-weight:600;
+    max-width:640px;
+    margin: 0 auto 28px;
+    text-align: center;
   }
-  .hero-facts div{ border-left:2px solid var(--red); padding-left:10px; }
-  .hero-facts b{ font-family:var(--font-display); font-size:26px; font-weight:700; display:block; line-height:1; }
-  .hero-facts span{ font-family:var(--font-stamp); font-size:11px; font-weight:700; color:var(--text-dim); text-transform:uppercase; }
+  .hero p.lede strong {
+    font-weight:800;
+    color:var(--ink);
+  }
+  .hero-ctas {
+    text-align: center;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+  .hero-main-btn {
+    width: 100%;
+    max-width: 440px;
+    min-height: 62px;
+    font-size: clamp(16px, 4.2vw, 19px);
+    line-height: 1.25;
+    padding: 18px 28px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .hero-delivery-note {
+    font-family: var(--font-stamp);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    margin: 18px auto 16px;
+    text-align: center;
+  }
+  .hero-social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  .avatar-cluster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .avatar-cluster img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2.5px solid var(--cream);
+    margin-left: -12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  }
+  .avatar-cluster img:first-child {
+    margin-left: 0;
+  }
 
   /* ===== product collage ===== */
-  .product-collage {
-    grid-column: 2;
-    grid-row: 1 / span 3;
-    position:relative;
-    height:auto;
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    width:100%;
+  .hero-image-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    box-shadow: 0 16px 44px rgba(46,54,48,0.12);
+    padding: 24px;
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
   .hero-collage-img {
-    width: 118%;
-    max-width: 820px;
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    margin-right: -18%;
-    mix-blend-mode: multiply;
+    display: block;
+    margin: 0 auto;
   }
   
   .cover {
@@ -280,7 +315,18 @@
   .sec-head.center .sec-lede{ margin:0 auto; }
 
   /* ===== VITRINE ===== */
-  .vitrine{ background:var(--cream); overflow:hidden; }
+  .vitrine{ background:#fff; padding:76px 0 68px; overflow:hidden; }
+  .vitrine-main-title {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 7.5vw, 44px);
+    line-height: 1.18;
+    color: var(--ink);
+    font-weight: 700;
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 36px;
+    padding: 0 16px;
+  }
   .bleed{
     width:100vw;
     margin-left:calc(50% - 50vw);
@@ -288,17 +334,35 @@
     overflow:hidden;
   }
   .carousel-track{
-    display:flex; gap:26px;
+    display:flex;
+    gap:18px;
     overflow-x:auto;
-    padding:6px 40px 14px;
+    padding:10px calc(50vw - 140px) 30px;
     scrollbar-width:none;
+    scroll-snap-type:x mandatory;
+    align-items:center;
   }
   .carousel-track::-webkit-scrollbar{ display:none; }
   
   .carousel-img {
     flex: 0 0 auto;
-    height: 360px;
-    aspect-ratio: 4/5;
+    width: 280px;
+    height: auto;
+    border-radius: 26px;
+    box-shadow: 0 16px 36px rgba(46,54,48,0.14);
+    scroll-snap-align: center;
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  @media (min-width: 768px) {
+    .carousel-track {
+      gap: 28px;
+      padding: 10px 40px 30px;
+      justify-content: center;
+    }
+    .carousel-img {
+      width: 320px;
+    }
   }
   .page-mock {
     background:#fff;
@@ -325,7 +389,562 @@
     padding-top:12px;
   }
 
-  /* ===== ESPELHO ===== */
+  /* ===== MATERIAL ÚNICO ===== */
+  .material-unico {
+    background: var(--cream-deep);
+    padding: 76px 0 72px;
+  }
+  .material-sec-title {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 7.8vw, 44px);
+    line-height: 1.15;
+    font-weight: 800;
+    text-align: center;
+    color: var(--ink);
+    margin: 0 auto 38px;
+    max-width: 640px;
+  }
+  .material-sec-title .blue-text {
+    color: #0047FF;
+    display: inline-block;
+  }
+  .material-cards-list {
+    max-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .material-card {
+    background: #FFFFFF;
+    border-radius: 26px;
+    padding: 26px 24px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .material-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  }
+  .material-icon-badge {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    flex-shrink: 0;
+  }
+  .badge-blue   { background: #EBF2FF; }
+  .badge-mint   { background: #E6F7F7; }
+  .badge-orange { background: #FFF0E6; }
+  .badge-yellow { background: #FEF9C3; }
+
+  .material-card-text {
+    font-family: var(--font-body);
+    font-size: clamp(17px, 4.3vw, 20px);
+    line-height: 1.4;
+    color: #6B776C;
+    font-weight: 600;
+    text-align: left;
+    margin: 0;
+  }
+
+  /* ===== ALÉM DA ESCOLA & PROMO BANNER & ACREDITAR CARD ===== */
+  .alem-escola-text {
+    font-family: var(--font-body);
+    font-size: clamp(17px, 4.3vw, 21px);
+    line-height: 1.4;
+    color: #6B776C;
+    font-weight: 600;
+    text-align: center;
+    max-width: 580px;
+    margin: 36px auto 36px;
+    padding: 0 16px;
+  }
+  .promo-countdown-banner {
+    background: #CC0E0E;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 26px 16px 24px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .promo-title {
+    font-family: var(--font-stamp);
+    font-size: 13.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+  .promo-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .time-num {
+    font-family: var(--font-stamp);
+    font-size: clamp(36px, 10vw, 46px);
+    font-weight: 900;
+    line-height: 1;
+  }
+  .time-label {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 4px;
+    opacity: 0.95;
+  }
+  .acreditar-sec {
+    background: var(--cream-deep);
+  }
+  .acreditar-card {
+    background: #FFFFFF;
+    border-radius: 28px;
+    padding: 44px 28px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .acreditar-title {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 7.5vw, 38px);
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.15;
+    text-align: center;
+    margin: 0 0 32px;
+  }
+  .acreditar-btn {
+    width: 100%;
+    background: #EA580C;
+    color: #FFFFFF;
+    padding: 18px 24px;
+    border-radius: 10px;
+    font-family: var(--font-stamp);
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    box-shadow: 0 10px 24px rgba(234, 88, 12, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    display: inline-block;
+  }
+  .acreditar-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(234, 88, 12, 0.38);
+  }
+
+  /* ===== ESTE MATERIAL É IDEAL PARA VOCÊ ===== */
+  .ideal-para-voce {
+    background: #FFFFFF;
+    padding: 76px 0 72px;
+  }
+  .ideal-title {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 7.8vw, 42px);
+    line-height: 1.15;
+    font-weight: 800;
+    text-align: center;
+    color: var(--ink);
+    margin: 0 auto 38px;
+    max-width: 640px;
+    padding: 0 16px;
+  }
+  .ideal-cards-list {
+    max-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 16px;
+  }
+  .ideal-card {
+    background: #F4FAF5;
+    border: 1px solid #D2EAD6;
+    border-radius: 26px;
+    padding: 32px 24px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 18px;
+    box-shadow: 0 10px 28px rgba(46, 125, 50, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .ideal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(46, 125, 50, 0.1);
+  }
+  .ideal-check-badge {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #C8E6C9;
+    color: #1B7F32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .ideal-check-badge svg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 3.5;
+    stroke: #1B7F32;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .ideal-card-text {
+    font-family: var(--font-body);
+    font-size: clamp(17px, 4.3vw, 20px);
+    line-height: 1.35;
+    color: var(--ink);
+    font-weight: 700;
+    margin: 0;
+  }
+
+  /* ===== COMO APLICAR O MÉTODO ===== */
+  .metodo-sec {
+    background: var(--cream-deep);
+    padding: 76px 0 72px;
+  }
+  .metodo-title {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 7.8vw, 42px);
+    line-height: 1.15;
+    font-weight: 800;
+    text-align: center;
+    color: var(--ink);
+    margin: 0 auto 14px;
+    max-width: 640px;
+    padding: 0 16px;
+  }
+  .metodo-subtitle {
+    font-family: var(--font-body);
+    font-size: clamp(18px, 4.5vw, 21px);
+    line-height: 1.4;
+    color: #6B776C;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto 48px;
+    max-width: 580px;
+    padding: 0 16px;
+  }
+  .metodo-steps {
+    max-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    padding: 0 16px;
+  }
+  .metodo-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .step-icon-box {
+    width: 92px;
+    height: 92px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 22px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 46px;
+    margin: 0 auto 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .step-icon-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.1);
+  }
+  .step-pill {
+    background: #1D58E8;
+    color: #FFFFFF;
+    font-family: var(--font-stamp);
+    font-size: 13.5px;
+    font-weight: 800;
+    padding: 6px 20px;
+    border-radius: 999px;
+    display: inline-block;
+    margin-bottom: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(29, 88, 232, 0.24);
+  }
+  .step-title {
+    font-family: var(--font-display);
+    font-size: clamp(23px, 6.5vw, 30px);
+    font-weight: 800;
+    color: var(--ink);
+    margin: 0 0 10px;
+  }
+  .step-desc {
+    font-family: var(--font-body);
+    font-size: clamp(16px, 4.2vw, 19px);
+    line-height: 1.45;
+    color: #6B776C;
+    font-weight: 600;
+    margin: 0;
+    max-width: 320px;
+  }
+
+  /* ===== BLOCO SÉRIE DESCOBRINDO O PORQUÊ DA FÉ ===== */
+  .serie-block-sec {
+    background: #FFFFFF;
+    padding: 68px 0 76px;
+  }
+  .serie-card {
+    background: #182F58;
+    border-radius: 32px;
+    padding: 38px 28px 36px;
+    max-width: 580px;
+    margin: 0 auto;
+    box-shadow: 0 20px 48px rgba(24, 47, 88, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .serie-alert-badge {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 12px;
+    padding: 14px 18px;
+    text-align: center;
+    margin-bottom: 26px;
+  }
+  .serie-alert-badge span {
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-size: clamp(17px, 4.3vw, 20px);
+    font-weight: 600;
+  }
+  .serie-title {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 7.2vw, 36px);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.18;
+    text-align: center;
+    margin: 0 0 28px;
+  }
+  .serie-image-box {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+    margin-bottom: 32px;
+  }
+  .serie-image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 14px;
+  }
+  .serie-subtitle {
+    color: #D1DCEE;
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .serie-checklist {
+    display: flex;
+    flex-direction: column;
+  }
+  .serie-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-size: clamp(17px, 4.3vw, 19px);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .serie-check-item:last-child {
+    border-bottom: none;
+  }
+  .serie-check-icon {
+    color: #22c55e;
+    font-size: 20px;
+    font-weight: 900;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .serie-urgency-text {
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-size: clamp(17px, 4.4vw, 20px);
+    line-height: 1.4;
+    text-align: center;
+    margin: 28px auto 26px;
+    max-width: 440px;
+  }
+  .serie-cta-btn {
+    width: 100%;
+    background: #EA580C;
+    color: #FFFFFF;
+    padding: 20px 24px;
+    border-radius: 12px;
+    font-family: var(--font-stamp);
+    font-size: clamp(16px, 4.2vw, 18px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 0 10px 24px rgba(234, 88, 12, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .serie-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(234, 88, 12, 0.45);
+  }
+  .serie-email-note {
+    color: #D1DCEE;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 18px;
+  }
+
+  /* ===== SEÇÃO 3 BÔNUS EXCLUSIVOS ===== */
+  .bonus-sec-new {
+    background: var(--cream-deep);
+    padding: 78px 0 84px;
+  }
+  .bonus-sec-title {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 8vw, 44px);
+    font-weight: 800;
+    color: var(--ink);
+    text-align: center;
+    line-height: 1.15;
+    margin: 0 auto 12px;
+  }
+  .bonus-sec-subtitle {
+    font-family: var(--font-body);
+    font-size: clamp(18px, 4.5vw, 21px);
+    color: #6B776C;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+  .bonus-pill-badge {
+    text-align: center;
+    margin-bottom: 46px;
+  }
+  .bonus-pill-badge span {
+    background: #EF4444;
+    color: #FFFFFF;
+    font-family: var(--font-stamp);
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px 24px;
+    border-radius: 999px;
+    display: inline-block;
+    box-shadow: 0 6px 16px rgba(239, 68, 68, 0.28);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .bonus-grid-new {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  .bonus-card-new {
+    background: #FFFFFF;
+    border-radius: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07);
+    padding: 30px 24px 28px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .bonus-card-new:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
+  }
+  .bonus-card-img {
+    text-align: center;
+    margin: 0 auto 22px;
+  }
+  .bonus-card-img img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+  }
+  .bonus-card-title {
+    font-family: var(--font-body);
+    font-size: clamp(21px, 5.8vw, 25px);
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 14px;
+    line-height: 1.28;
+    text-align: left;
+  }
+  .bonus-card-desc {
+    font-family: var(--font-body);
+    font-size: clamp(16px, 4.3vw, 18px);
+    line-height: 1.48;
+    color: #525B53;
+    font-weight: 500;
+    margin: 0 0 24px;
+    text-align: left;
+  }
+  .bonus-price-pill {
+    background: #0B1C3F;
+    color: #FFFFFF;
+    font-family: var(--font-stamp);
+    font-size: clamp(16px, 4.3vw, 18px);
+    font-weight: 800;
+    padding: 16px 20px;
+    border-radius: 14px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    letter-spacing: 0.02em;
+  }
+  .bonus-price-pill .old-price {
+    color: #EF4444;
+    text-decoration: line-through;
+    font-weight: 800;
+    margin: 0 4px;
+  }
+
+  /* ===== CATEGORIAS ===== */
   .espelho { background:var(--cream-deep); }
   .mirror-list{
     max-width:640px;
@@ -583,19 +1202,28 @@
     section { padding: 56px 0; }
     
     /* Hero Section */
-    .hero { padding: 110px 0 50px !important; }
-    .hero-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
-    .hero-text-col, .hero-ctas, .hero-facts, .product-collage {
+    .hero { padding: 105px 0 50px !important; }
+    .hero-content {
       width: 100%;
     }
-    .product-collage {
-      justify-content: center !important;
-      margin: 16px 0 !important;
-      width: 100% !important;
+    .hero-badge-pill {
+      font-size: 12.5px;
+      padding: 7px 18px;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 7.8vw, 40px) !important;
+      line-height: 1.16 !important;
+      margin-bottom: 22px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .hero-image-card {
+      padding: 16px;
+      border-radius: 22px;
+      margin: 0 auto 26px;
+      width: 100%;
+      box-shadow: 0 12px 34px rgba(46,54,48,0.14);
     }
     .hero-collage-img {
       width: 100% !important;
@@ -603,24 +1231,16 @@
       height: auto !important;
       margin: 0 auto !important;
       display: block;
-      mix-blend-mode: multiply;
-      transform: none !important;
-    }
-    .hero h1 {
-      font-size: clamp(30px, 8vw, 44px) !important;
-      line-height: 1.16 !important;
-      margin-bottom: 18px;
-      font-weight: 700;
     }
     .hero p.lede {
       font-size: 17px;
       line-height: 1.55;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
     }
     .hero-facts {
-      gap: 20px;
-      justify-content: flex-start;
-      margin-top: 6px;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 8px;
     }
     .hero-facts b { font-size: 24px; }
     .hero-facts span { font-size: 12px; }
@@ -813,45 +1433,41 @@
         radial-gradient(circle at 18px calc(100% - 26px), rgba(0,0,0,0.18) 0 3.5px, rgba(0,0,0,0.05) 3.5px 5px, transparent 5.6px),
         linear-gradient(to right, transparent 27px, var(--red) 27px, var(--red) 28px, transparent 28px);
     }
-  }
-
-  @media (max-width: 480px){
+  }  @media (max-width: 480px){
     .urgency-bar {
-      padding: 8px 10px;
-      gap: 6px;
-      font-size: 13px;
+      padding: 10px 12px;
+      font-size: 12.5px;
     }
-    .urgency-bar .tag { font-size: 12px !important; padding: 4px 8px !important; font-weight: 800; }
-    .urgency-bar .clock { font-size: 13.5px !important; padding: 4px 8px !important; font-weight: 800; }
 
-    .hero { padding: 118px 0 44px !important; }
-    .hero-eyebrow { font-size: 13px !important; line-height: 1.35; margin-bottom: 14px; }
-    .hero h1 { font-size: clamp(28px, 7.6vw, 34px) !important; line-height: 1.18 !important; margin-bottom: 16px; }
-    .hero p.lede { font-size: 16.5px !important; line-height: 1.55; margin-bottom: 18px; }
-    .sec-title { font-size: clamp(24px, 7vw, 30px) !important; line-height: 1.2 !important; }
-    
-    .hero-facts {
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 12px;
+    .hero { padding: 100px 0 44px !important; }
+    .hero-badge-pill { font-size: 12px !important; padding: 7px 16px !important; margin-bottom: 16px; }
+    .hero h1 { font-size: clamp(26px, 7.6vw, 34px) !important; line-height: 1.18 !important; margin-bottom: 20px; }
+    .hero p.lede { font-size: 16.5px !important; line-height: 1.5 !important; margin-bottom: 24px; }
+    .hero-main-btn {
+      font-size: 16.5px !important;
+      padding: 16px 20px;
+      min-height: 58px;
+      box-shadow: 4px 4px 0 var(--ink);
     }
-    .hero-facts div {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
+    .hero-delivery-note {
+      font-size: 14px;
+      margin: 14px auto 16px;
     }
-    .hero-facts b { font-size: 22px !important; }
-    .hero-facts span { font-size: 13px !important; }
+    .avatar-cluster img {
+      width: 40px;
+      height: 40px;
+      margin-left: -10px;
+    }
 
-    .product-collage {
-      margin: 12px 0 !important;
-      width: 100% !important;
+    .hero-image-card {
+      padding: 12px;
+      border-radius: 20px;
+      margin: 0 auto 24px;
     }
     .hero-collage-img {
       width: 100% !important;
       max-width: 100% !important;
       height: auto !important;
-      transform: none !important;
     }
     
     .final-cta { padding: 50px 16px; }
@@ -864,19 +1480,460 @@
 
   @media (max-width: 400px){
     .urgency-bar {
-      padding: 7px 8px;
-      gap: 6px;
-      font-size: 12px;
+      padding: 9px 10px;
+      font-size: 11.5px;
     }
-    .urgency-bar .tag { font-size: 11px !important; padding: 3px 7px !important; }
-    .urgency-bar .clock { font-size: 12.5px !important; padding: 3px 7px !important; }
 
-    .hero { padding: 114px 0 38px !important; }
-    .hero h1 { font-size: 27px !important; }
+    .hero { padding: 96px 0 38px !important; }
+    .hero h1 { font-size: 25px !important; }
+    .hero p.lede { font-size: 15.5px !important; }
+    .hero-main-btn { font-size: 15px !important; padding: 14px 16px; }
+    .hero-delivery-note { font-size: 13px; }
+    .avatar-cluster img { width: 36px; height: 36px; }
+    .vitrine-main-title { font-size: 25px !important; margin-bottom: 24px; }
+    .carousel-track { padding: 10px calc(50vw - 130px) 24px; gap: 14px; }
+    .carousel-img { width: 260px; border-radius: 22px; }
+    .material-sec-title { font-size: 27px !important; margin-bottom: 26px; }
+    .material-card { padding: 20px 18px; border-radius: 22px; gap: 16px; }
+    .material-icon-badge { width: 54px; height: 54px; font-size: 26px; }
+    .material-card-text { font-size: 16.5px !important; }
+    .alem-escola-text { font-size: 16.5px !important; margin: 28px auto 28px; }
+    .promo-countdown-banner { padding: 22px 14px 20px; }
+    .promo-title { font-size: 12.5px !important; }
+    .time-num { font-size: 38px !important; }
+    .acreditar-card { padding: 34px 22px; border-radius: 24px; }
+    .acreditar-title { font-size: 25px !important; margin-bottom: 26px; }
+    .acreditar-btn { font-size: 15px !important; padding: 16px 20px; }
+    .ideal-title { font-size: 27px !important; margin-bottom: 28px; }
+    .ideal-card { padding: 26px 18px 24px; border-radius: 22px; gap: 14px; }
+    .ideal-check-badge { width: 48px; height: 48px; }
+    .ideal-check-badge svg { width: 28px; height: 28px; }
+    .ideal-card-text { font-size: 16.5px !important; }
+    .metodo-title { font-size: 27px !important; margin-bottom: 12px; }
+    .metodo-subtitle { font-size: 17px !important; margin-bottom: 40px; }
+    .metodo-steps { gap: 40px; }
+    .step-icon-box { width: 84px; height: 84px; font-size: 40px; margin-bottom: 16px; }
+    .step-title { font-size: 22px !important; }
+    .step-desc { font-size: 15.5px !important; }
+    .serie-card { padding: 28px 18px 28px; border-radius: 26px; }
+    .serie-title { font-size: 25px !important; margin-bottom: 22px; }
+    .serie-image-box { padding: 14px; margin-bottom: 26px; }
+    .serie-check-item { font-size: 16px !important; padding: 13px 0; }
+    .serie-urgency-text { font-size: 16.5px !important; }
+    .serie-cta-btn { font-size: 15.5px !important; padding: 18px 18px; }
+    .bonus-sec-title { font-size: 28px !important; margin-bottom: 10px; }
+    .bonus-sec-subtitle { font-size: 17px !important; margin-bottom: 18px; }
+    .bonus-pill-badge { margin-bottom: 36px; }
+    .bonus-grid-new { gap: 32px; }
+    .bonus-card-new { padding: 24px 18px 24px; border-radius: 24px; }
+    .bonus-card-title { font-size: 20px !important; }
+    .bonus-card-desc { font-size: 15.5px !important; }
+    .bonus-price-pill { font-size: 15.5px !important; padding: 15px 16px; }
     .sec-title { font-size: 24px !important; }
     .plan-name { font-size: 28px !important; }
     .plan-price .new { font-size: 44px !important; }
     .guarantee-box h3 { font-size: 24px !important; }
+    .pricing-main-title { font-size: 32px !important; }
+    .plan-card-title { font-size: 24px !important; }
+    .plan-big-price { font-size: 44px !important; }
+    .plan-card-new { padding: 26px 18px 24px; }
+  }
+
+  /* ===== NOVA SEÇÃO DE VENDAS / PLANOS ===== */
+  .pricing-sec-new {
+    background: #E5E7EB;
+    padding: 64px 0 84px;
+    position: relative;
+  }
+  .pricing-alert-pill {
+    background: #EF4444;
+    color: #FFFFFF;
+    font-family: var(--font-stamp);
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px 24px;
+    border-radius: 999px;
+    display: inline-block;
+    box-shadow: 0 4px 14px rgba(239, 68, 68, 0.32);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto 24px;
+  }
+  .pricing-main-title {
+    font-family: var(--font-display);
+    font-size: clamp(34px, 8vw, 48px);
+    font-weight: 800;
+    color: #0B1C3F;
+    text-align: center;
+    line-height: 1.15;
+    margin: 0 auto;
+  }
+  .pricing-main-title .blue-hl {
+    color: #2563EB;
+  }
+  .pricing-sep-line {
+    width: 48px;
+    height: 2px;
+    background: #94A3B8;
+    border: none;
+    margin: 24px auto 44px;
+  }
+  .plans-grid-new {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  .plan-card-new {
+    background: #FFFFFF;
+    border-radius: 28px;
+    border: 1px solid #CBD5E1;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+    padding: 34px 26px 32px;
+    position: relative;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .plan-card-new:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 46px rgba(0, 0, 0, 0.12);
+  }
+  .plan-bestseller-badge {
+    background: #BBF7D0;
+    color: #166534;
+    font-family: var(--font-stamp);
+    font-size: 13px;
+    font-weight: 800;
+    padding: 8px 22px;
+    border-radius: 999px;
+    border: 1px solid #4ADE80;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.22);
+    white-space: nowrap;
+  }
+  .plan-card-title {
+    font-family: var(--font-body);
+    font-size: clamp(26px, 6.5vw, 32px);
+    font-weight: 800;
+    color: #0B1C3F;
+    margin: 0 0 22px;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .plan-card-img-wrap {
+    margin: 0 auto 24px;
+    text-align: center;
+  }
+  .plan-card-img-wrap img {
+    width: 100%;
+    max-width: 290px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .plan-2x-pill {
+    background: #DCFCE7;
+    color: #15803D;
+    font-family: var(--font-stamp);
+    font-size: 14px;
+    font-weight: 800;
+    padding: 8px 24px;
+    border-radius: 999px;
+    border: 1px solid #4ADE80;
+    display: inline-block;
+    margin: 0 auto 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .plan-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-bottom: 1px solid #E2E8F0;
+    padding-bottom: 28px;
+  }
+  .plan-features-list li {
+    font-family: var(--font-body);
+    font-size: 16.5px;
+    line-height: 1.45;
+    color: #1E293B;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .plan-features-list li.off {
+    color: #94A3B8;
+    text-decoration: line-through;
+  }
+  .plan-features-list li .f-icon {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .f-icon.yes {
+    color: #10B981;
+  }
+  .f-icon.no {
+    color: #EF4444;
+  }
+  .plan-old-price {
+    color: #EF4444;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: line-through;
+    margin: 0 0 4px;
+  }
+  .plan-big-price {
+    color: #10B981;
+    font-family: var(--font-body);
+    font-size: clamp(48px, 12vw, 60px);
+    font-weight: 900;
+    line-height: 1;
+    margin: 0 0 8px;
+    letter-spacing: -0.03em;
+  }
+  .plan-installments {
+    color: #475569;
+    font-family: var(--font-body);
+    font-size: 15.5px;
+    font-weight: 500;
+    margin: 0 0 16px;
+  }
+  .plan-savings-badge {
+    color: #0B1C3F;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .plan-savings-badge .green-dot {
+    color: #10B981;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .plan-cta-button {
+    background: #10B981;
+    color: #FFFFFF;
+    font-family: var(--font-stamp);
+    font-size: 17px;
+    font-weight: 800;
+    padding: 20px 24px;
+    border-radius: 12px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+    transition: all 0.2s ease;
+  }
+  .plan-cta-button:hover {
+    background: #059669;
+    box-shadow: 0 10px 24px rgba(16, 185, 129, 0.45);
+    transform: translateY(-2px);
+  }
+  .plan-yellow-box {
+    background: #FEF9C3;
+    border: 1px solid #FDE047;
+    border-radius: 16px;
+    padding: 18px 16px 14px;
+    margin-top: 28px;
+    text-align: center;
+  }
+  .plan-yellow-box p {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 700;
+    color: #1E293B;
+    margin: 0 0 12px;
+  }
+  .plan-yellow-box .arrow-down-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #10B981;
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+  }
+  @media (min-width: 900px) {
+    .plans-grid-new {
+      max-width: 960px;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 36px;
+    }
+  }
+  /* ===== SEÇÃO SELO GARANTIA 90 DIAS ===== */
+  .guarantee-90-sec {
+    background: #F8FAFC;
+    padding: 72px 16px 76px;
+    text-align: center;
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  .guarantee-90-wrap {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .guarantee-90-badge-wrap {
+    display: inline-block;
+    margin: 0 auto 24px;
+    filter: drop-shadow(0 12px 24px rgba(212, 175, 55, 0.25));
+  }
+  .guarantee-90-title {
+    font-family: var(--font-body);
+    font-size: clamp(28px, 7vw, 36px);
+    font-weight: 800;
+    color: #0B1C3F;
+    margin: 0 0 16px;
+    line-height: 1.2;
+  }
+  .guarantee-90-text {
+    font-family: var(--font-body);
+    font-size: clamp(16px, 4.3vw, 18px);
+    font-weight: 400;
+    color: #475569;
+    line-height: 1.65;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+  @media (max-width: 400px) {
+    .guarantee-90-sec { padding: 56px 14px 60px; }
+    .guarantee-90-title { font-size: 26px !important; }
+    .guarantee-90-text { font-size: 15.5px !important; }
+  }
+
+  /* ===== ESTRUTURAS EXCLUSIVAS PARA COMPUTADOR (DESKTOP ONLY) ===== */
+  @media (min-width: 900px) {
+    /* 1. HERO - 2 Colunas no Computador */
+    .hero .hero-content, .hero .wrap.hero-content {
+      display: grid !important;
+      grid-template-columns: 1.15fr 0.85fr !important;
+      gap: 48px !important;
+      align-items: center !important;
+      text-align: left !important;
+      max-width: 1140px !important;
+      margin: 0 auto !important;
+    }
+    .hero .hero-left-col {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+    }
+    .hero h1,
+    .hero p.lede,
+    .hero p.sub,
+    .hero-ctas,
+    .hero-delivery-note,
+    .hero p {
+      text-align: left !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .hero-ctas, .hero .btn {
+      width: auto !important;
+      margin-left: 0 !important;
+    }
+    .hero-badge-pill, .hero .badge {
+      margin-left: 0 !important;
+    }
+    .hero-social-proof {
+      justify-content: flex-start !important;
+    }
+    .hero-image-card {
+      margin: 0 !important;
+      width: 100% !important;
+      max-width: none !important;
+    }
+
+    /* 2. MATERIAL ÚNICO - Grid 2x2 no Computador */
+    .material-cards-list {
+      max-width: 940px !important;
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 24px !important;
+    }
+
+    /* 3. COMO APLICAR O MÉTODO - Grid 4 Colunas no Computador */
+    .metodo-steps {
+      max-width: 1120px !important;
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 28px !important;
+    }
+
+    /* 4. 6 BÔNUS EXCLUSIVOS - Grid 3 Colunas no Computador */
+    .bonus-grid-new {
+      max-width: 1140px !important;
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 28px !important;
+    }
+
+    /* 5. SEÇÃO DE PLANOS - 2 Colunas lado a lado no Computador */
+    .plans-grid-new {
+      max-width: 980px !important;
+      flex-direction: row !important;
+      align-items: flex-start !important;
+      gap: 36px !important;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .hero .hero-content, .hero .wrap.hero-content {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+    .hero-left-col {
+      display: contents !important;
+    }
+    .hero-badge-pill, .hero .badge {
+      order: 1 !important;
+    }
+    .hero h1 {
+      order: 2 !important;
+    }
+    .hero-image-card {
+      order: 3 !important;
+      margin: 20px auto 28px !important;
+    }
+    .hero p.lede, .hero p.sub {
+      order: 4 !important;
+    }
+    .hero-ctas, .hero .btn {
+      order: 5 !important;
+    }
+    .hero-delivery-note {
+      order: 6 !important;
+    }
+    .hero-social-proof {
+      order: 7 !important;
+    }
   }
 </style>
 </head>
@@ -884,31 +1941,40 @@
 
 <!-- URGENCY BAR -->
 <div class="urgency-bar">
-  <span class="tag">🕯️ Condição especial de lançamento até ⏳</span>
-  <span class="clock" id="mainClock">10:00</span>
+  <span>⚡ OFERTA ESPECIAL DISPONÍVEL APENAS HOJE</span>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text-col">
-      <span class="hero-eyebrow">🌱👨‍👩‍👧 Para pais e mães que querem estar mais presentes</span>
-      <h1>Você ama seu filho ❤️. Só queria que a rotina desse mais <em>espaço</em> pra mostrar isso 🕰️.</h1>
-      <p class="lede">Um desafio diário de 90 dias 📅 para pais cristãos ✝️ que querem se aproximar do coração dos filhos — na fé e no dia a dia, um passo pequeno de cada vez.</p>
+  <div class="wrap hero-content">
+    <div class="hero-left-col">
+      <div class="hero-badge-pill">
+        🔒 COMPRA 100% SEGURA E PROTEGIDA
+      </div>
+
+      <h1>Construa Uma Fé Inabalável Nos Seus Filhos Antes Que Seja Tarde Demais</h1>
+
+      <p class="lede">Um desafio diário de 90 dias 📅 para pais cristãos ✝️ que querem se aproximar do coração dos filhos — <strong>na fé e no dia a dia, um passo pequeno de cada vez.</strong></p>
+
+      <div class="hero-ctas">
+        <button class="btn hero-main-btn" onclick="document.getElementById('oferta').scrollIntoView({behavior: 'smooth'})">QUERO GARANTIR O ACESSO COM DESCONTO</button>
+      </div>
+
+      <p class="hero-delivery-note">Você recebe tudo na hora, direto no seu 📩 e-mail</p>
+
+      <div class="hero-social-proof">
+        <div class="avatar-cluster">
+          <img src="gente1.webp" alt="Cliente">
+          <img src="pessoa1.webp" alt="Cliente">
+          <img src="gente2.webp" alt="Cliente">
+          <img src="pessoa2.webp" alt="Cliente">
+          <img src="gente3.webp" alt="Cliente">
+        </div>
+      </div>
     </div>
 
-    <div class="hero-ctas">
-      <button class="btn" onclick="document.getElementById('oferta').scrollIntoView({behavior: 'smooth'})">Quero começar hoje →</button>
-    </div>
-
-    <div class="product-collage">
+    <div class="hero-image-card">
       <img src="capa_site.webp" alt="90 Dias com Meu Filho" class="hero-collage-img">
-    </div>
-
-    <div class="hero-facts">
-      <div><b>90</b><span>Dias de caminhada 🚶‍♂️</span></div>
-      <div><b>05</b><span>Bônus inclusos 🎁</span></div>
-      <div><b>Já</b><span>Acesso imediato ⚡</span></div>
     </div>
   </div>
 </section>
@@ -916,66 +1982,527 @@
 <!-- VITRINE -->
 <section class="vitrine">
   <div class="wrap">
-    <div class="sec-head center">
-      <span class="sec-tab">📖👀 Por dentro do desafio</span>
-      <h2 class="sec-title">Um passo simples por dia, para você nunca ficar sem saber o que fazer 💡</h2>
-      <p class="sec-lede">Cada dia já vem pronto — a pergunta 🗣️, a oração 🙏 e a pequena ação 🤝 já estão ali, esperando por vocês dois.</p>
-    </div>
+    <h2 class="vitrine-main-title">Cada lição é pensada para fazer a criança descobrir a verdade sozinha, criando conexões profundas e duradouras.</h2>
   </div>
 
   <div class="bleed">
     <div class="carousel-track" id="carousel">
-      <img src="imagem1.webp" alt="Amostra 1" class="carousel-img" style="object-fit:cover; border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-      <img src="imagem2.webp" alt="Amostra 2" class="carousel-img" style="object-fit:cover; border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-      <img src="imagem3.webp" alt="Amostra 3" class="carousel-img" style="object-fit:cover; border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-      <img src="imagem4.webp" alt="Amostra 4" class="carousel-img" style="object-fit:cover; border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-      <img src="imagem5.webp" alt="Amostra 5" class="carousel-img" style="object-fit:cover; border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-      <img src="imagem6.webp" alt="Amostra 6" class="carousel-img" style="object-fit:cover; border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-      <img src="imagem7.webp" alt="Amostra 7" class="carousel-img" style="object-fit:cover; border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+      <img src="imagem1.webp" alt="Amostra 1" class="carousel-img">
+      <img src="imagem2.webp" alt="Amostra 2" class="carousel-img">
+      <img src="imagem3.webp" alt="Amostra 3" class="carousel-img">
+      <img src="imagem4.webp" alt="Amostra 4" class="carousel-img">
+      <img src="imagem5.webp" alt="Amostra 5" class="carousel-img">
+      <img src="imagem6.webp" alt="Amostra 6" class="carousel-img">
+      <img src="imagem7.webp" alt="Amostra 7" class="carousel-img">
     </div>
   </div>
 </section>
 
-<!-- ESPELHO -->
-<section class="espelho">
+<!-- MATERIAL ÚNICO -->
+<section class="material-unico">
   <div class="wrap">
-    <div class="sec-head center">
-      <span class="sec-tab">🪞 Isso pode ser você</span>
-      <h2 class="sec-title">Talvez você não precise de uma família "consertada" 🛠️. Só de um caminho 🛤️.</h2>
-      <p class="sec-lede">Não é sobre algo quebrado. É sobre intencionalidade 🎯 — querer estar mais presente e não saber por onde começar.</p>
+    <h2 class="material-sec-title">
+      Você receberá um <br>
+      <span class="blue-text">material único</span>
+    </h2>
+
+    <div class="material-cards-list">
+      <div class="material-card">
+        <div class="material-icon-badge badge-blue">
+          <span>📚</span>
+        </div>
+        <p class="material-card-text">Livro Digital Completo com uma Jornada de 90 dias</p>
+      </div>
+
+      <div class="material-card">
+        <div class="material-icon-badge badge-mint">
+          <span>📱</span>
+        </div>
+        <p class="material-card-text">Acesso em celular, tablet ou computador</p>
+      </div>
+
+      <div class="material-card">
+        <div class="material-icon-badge badge-orange">
+          <span>🖨️</span>
+        </div>
+        <p class="material-card-text">Possibilidade de impressão, se a família desejar</p>
+      </div>
+
+      <div class="material-card">
+        <div class="material-icon-badge badge-yellow">
+          <span>💡</span>
+        </div>
+        <p class="material-card-text">Ritmo flexível, pensado para uso semanal</p>
+      </div>
     </div>
-    <div class="mirror-list">
-      <div class="m-item"><span class="em">😔</span> <span>Sente que o celular e o trabalho roubam o tempo que era do seu filho</span></div>
-      <div class="m-item"><span class="em">🕰️</span> <span>A rotina engole os dias e a conversa de verdade nunca acontece</span></div>
-      <div class="m-item"><span class="em">⛪</span> <span>Leva à igreja, mas não sabe como viver a fé dentro de casa</span></div>
-      <div class="m-item"><span class="em">🧭</span> <span>Quer se aproximar, mas não tem um plano claro do que fazer hoje</span></div>
+
+    <p class="alem-escola-text">Um Material Que Vai Muito Além da Escola Dominical</p>
+  </div>
+</section>
+
+<!-- BANNER PROMOCIONAL -->
+<div class="promo-countdown-banner">
+  <div class="promo-title">APROVEITE O PREÇO PROMOCIONAL POR TEMPO LIMITADO</div>
+  <div class="promo-timer">
+    <div class="time-box">
+      <span class="time-num" id="promo-min">14</span>
+      <span class="time-label">Minutos</span>
+    </div>
+    <div class="time-box">
+      <span class="time-num" id="promo-sec">59</span>
+      <span class="time-label">Segundos</span>
+    </div>
+  </div>
+</div>
+
+<!-- SEÇÃO AQUI SEU FILHO NÃO APRENDE APENAS -->
+<section class="acreditar-sec">
+  <div class="wrap" style="padding-top: 38px; padding-bottom: 44px;">
+    <div class="acreditar-card">
+      <h3 class="acreditar-title">Aqui, seu filho não aprende apenas o que acreditar, mas por que acreditar.</h3>
+      <a href="#oferta" class="btn acreditar-btn">QUERO GARANTIR O ACESSO</a>
     </div>
   </div>
 </section>
 
-<!-- CATEGORIAS (Checklist) -->
-<section class="categorias">
+<!-- ESTE MATERIAL É IDEAL PARA VOCÊ -->
+<section class="ideal-para-voce">
   <div class="wrap">
-    <div class="sec-head center">
-      <span class="sec-tab">🏡👨‍👩‍👧‍👦 Para dentro de casa</span>
-      <h2 class="sec-title">Tudo o que você recebe para nunca ficar sem saber o próximo passo 🗺️</h2>
-      <p class="sec-lede">👨‍👩‍👧 Feito para caber na rotina real de uma família ⏰</p>
+    <h2 class="ideal-title">
+      Este Material É Ideal<br>
+      Para Você Que Deseja:
+    </h2>
+
+    <div class="ideal-cards-list">
+      <div class="ideal-card">
+        <div class="ideal-check-badge">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p class="ideal-card-text">Prevenir o abandono da fé no futuro</p>
+      </div>
+
+      <div class="ideal-card">
+        <div class="ideal-check-badge">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p class="ideal-card-text">Ajudar seu filho a responder dúvidas difíceis</p>
+      </div>
+
+      <div class="ideal-card">
+        <div class="ideal-check-badge">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p class="ideal-card-text">Desenvolver pensamento cristão profundo</p>
+      </div>
+
+      <div class="ideal-card">
+        <div class="ideal-check-badge">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p class="ideal-card-text">Ir além da Escola Dominical tradicional</p>
+      </div>
+
+      <div class="ideal-card">
+        <div class="ideal-check-badge">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p class="ideal-card-text">Construir uma fé firme antes da adolescência</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO APLICAR O MÉTODO -->
+<section class="metodo-sec">
+  <div class="wrap">
+    <h2 class="metodo-title">Como Aplicar o Método<br>No Dia a Dia Do Seu Filho</h2>
+    <p class="metodo-subtitle">Simples, prático e direto ao ponto.</p>
+
+    <div class="metodo-steps">
+      <div class="metodo-step">
+        <div class="step-icon-box">📚</div>
+        <span class="step-pill">PASSO 01</span>
+        <h3 class="step-title">Estudo guiado</h3>
+        <p class="step-desc">Seu filho aprende no ritmo dele, com lições curtas e objetivas.</p>
+      </div>
+
+      <div class="metodo-step">
+        <div class="step-icon-box">🗣️</div>
+        <span class="step-pill">PASSO 02</span>
+        <h3 class="step-title">Conversas Naturais</h3>
+        <p class="step-desc">As perguntas do material geram diálogos profundos em casa.</p>
+      </div>
+
+      <div class="metodo-step">
+        <div class="step-icon-box">💡</div>
+        <span class="step-pill">PASSO 03</span>
+        <h3 class="step-title">Pensamento crítico cristão</h3>
+        <p class="step-desc">Ele aprende a avaliar ideias, dúvidas e questionamentos.</p>
+      </div>
+
+      <div class="metodo-step">
+        <div class="step-icon-box">🙏</div>
+        <span class="step-pill">PASSO 04</span>
+        <h3 class="step-title">Fé aplicada à vida real</h3>
+        <p class="step-desc">A fé deixa de ser abstrata e passa a fazer sentido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO SÉRIE DESCOBRINDO O PORQUÊ DA FÉ -->
+<section class="serie-block-sec">
+  <div class="wrap">
+    <div class="serie-card">
+      <div class="serie-alert-badge">
+        <span>🚨 Oferta Limitada Apenas Hoje</span>
+      </div>
+
+      <h2 class="serie-title">Série "Descobrindo o Porquê da Fé" – 52 semanas de teologia sistemática para crianças</h2>
+
+      <div class="serie-image-box">
+        <img src="capa_site.webp" alt="Série Descobrindo o Porquê da Fé">
+      </div>
+
+      <p class="serie-subtitle">Seus filhos terão:</p>
+
+      <div class="serie-checklist">
+        <div class="serie-check-item">
+          <span class="serie-check-icon">✓</span>
+          <span>Base teológica sólida</span>
+        </div>
+        <div class="serie-check-item">
+          <span class="serie-check-icon">✓</span>
+          <span>Clareza intelectual</span>
+        </div>
+        <div class="serie-check-item">
+          <span class="serie-check-icon">✓</span>
+          <span>Segurança para responder questionamentos</span>
+        </div>
+        <div class="serie-check-item">
+          <span class="serie-check-icon">✓</span>
+          <span>Fundamento para a adolescência</span>
+        </div>
+      </div>
+
+      <p class="serie-urgency-text">
+        Essa oferta está disponível para as <strong>proximas 7 famílias.</strong> Depois disso, o preço será ajustado.
+      </p>
+
+      <a href="#oferta" class="btn serie-cta-btn">GARANTIR ACESSO COM DESCONTO</a>
+
+      <p class="serie-email-note">Você recebe tudo na hora, direto no seu 📩 e-mail</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 6 BÔNUS EXCLUSIVOS -->
+<section class="bonus-sec-new">
+  <div class="wrap">
+    <h2 class="bonus-sec-title">E não para por aí...<br>Tem mais!</h2>
+    <p class="bonus-sec-subtitle">Você também vai receber</p>
+    <div class="bonus-pill-badge">
+      <span>🔥 6 BÔNUS EXCLUSIVOS</span>
     </div>
 
-    <div class="ledger-sheet punch-list" style="position:relative;">
-      <span class="corner-emoji left">👨‍👩‍👧</span>
-      <span class="corner-emoji right">👨‍👩‍👦</span>
-      <div class="ledger-row"><span class="name">Desafios diários guiados, do dia 1 ao dia 90 🗓️</span><span class="mark">✓ incluso</span></div>
-      <div class="ledger-row"><span class="name">Devocionais curtos para viver a fé em casa 📖</span><span class="mark">✓ incluso</span></div>
-      <div class="ledger-row"><span class="name">Perguntas que abrem conversas difíceis 🗣️</span><span class="mark">✓ incluso</span></div>
-      <div class="ledger-row"><span class="name">Orações guiadas para fazer junto com seu filho 🙏</span><span class="mark">✓ incluso</span></div>
-      <div class="ledger-row"><span class="name">Atividades simples, sem tela 🪁</span><span class="mark">✓ incluso</span></div>
-      <div class="ledger-row"><span class="name">Pequenos rituais semanais de conexão ✨</span><span class="mark">✓ incluso</span></div>
-      <div class="ledger-row"><span class="name">Momentos de gratidão em família 🙌</span><span class="mark">✓ incluso</span></div>
-      <div class="ledger-row"><span class="name">Passos para pedir e oferecer perdão 🫂</span><span class="mark">✓ incluso</span></div>
-      <div class="ledger-row"><span class="name">Versículos para meditar juntos ✝️</span><span class="mark">✓ incluso</span></div>
-      <div class="ledger-row"><span class="name">Um registro para acompanhar a evolução 📈</span><span class="mark">✓ incluso</span></div>
+    <div class="bonus-grid-new">
+      <!-- BÔNUS #1 -->
+      <div class="bonus-card-new">
+        <div class="bonus-card-img">
+          <img src="capa_perguntas.webp" alt="Guia dos Pais Pensadores">
+        </div>
+        <h3 class="bonus-card-title">
+          <strong>🎁 Bônus #1</strong> Guia dos Pais Pensadores
+        </h3>
+        <p class="bonus-card-desc">
+          Um guia exclusivo para pais que ensina como lidar com perguntas difíceis sobre fé sem pânico, respostas prontas ou conflitos, ajudando a transformar dúvidas em conversas construtivas dentro de casa.
+        </p>
+        <div class="bonus-price-pill">
+          <span>Valor: <span class="old-price">R$47</span> <strong>GRÁTIS</strong></span>
+        </div>
+      </div>
+
+      <!-- BÔNUS #2 -->
+      <div class="bonus-card-new">
+        <div class="bonus-card-img">
+          <img src="capa_modelo_oracao.webp" alt="Manual de Erros Comuns que Enfraquecem a Fé Infantil">
+        </div>
+        <h3 class="bonus-card-title">
+          <strong>🎁 Bônus #2</strong> Manual de Erros Comuns que Enfraquecem a Fé Infantil
+        </h3>
+        <p class="bonus-card-desc">
+          Um material direto que mostra atitudes comuns, porém prejudiciais, que muitos pais cometem sem perceber — e como ajustá-las para proteger o desenvolvimento de uma fé mais madura e consciente.
+        </p>
+        <div class="bonus-price-pill">
+          <span>Valor: <span class="old-price">R$47</span> <strong>GRÁTIS</strong></span>
+        </div>
+      </div>
+
+      <!-- BÔNUS #3 -->
+      <div class="bonus-card-new">
+        <div class="bonus-card-img">
+          <img src="capa_checklist.webp" alt="Guia de Transição: Dos 14 para os 18 Anos">
+        </div>
+        <h3 class="bonus-card-title">
+          <strong>🎁 Bônus #3</strong> Guia de Transição: Dos 14 para os 18 Anos
+        </h3>
+        <p class="bonus-card-desc">
+          Um guia essencial que prepara seu filho para os desafios da juventude, da universidade e da vida adulta, oferecendo clareza e solidez para que ele permaneça firme em suas convicções cristãs.
+        </p>
+        <div class="bonus-price-pill">
+          <span>Valor: <span class="old-price">R$47</span> <strong>GRÁTIS</strong></span>
+        </div>
+      </div>
+
+      <!-- BÔNUS #4 -->
+      <div class="bonus-card-new">
+        <div class="bonus-card-img">
+          <img src="capa_playlist.webp" alt="Playlist de Louvor Para Ouvir Juntos">
+        </div>
+        <h3 class="bonus-card-title">
+          <strong>🎁 Bônus #4</strong> Playlist de Louvor Para Ouvir Juntos 🎵
+        </h3>
+        <p class="bonus-card-desc">
+          Uma seleção especial e curada de músicas cristãs para fortalecer a fé em casa, no carro ou durante viagens em família, criando um ambiente repleto da presença de Deus.
+        </p>
+        <div class="bonus-price-pill">
+          <span>Valor: <span class="old-price">R$29</span> <strong>GRÁTIS</strong></span>
+        </div>
+      </div>
+
+      <!-- BÔNUS #5 -->
+      <div class="bonus-card-new">
+        <div class="bonus-card-img">
+          <img src="capa_perguntas.webp" alt="100 Perguntas para Fazer no Carro ou Em Casa">
+        </div>
+        <h3 class="bonus-card-title">
+          <strong>🎁 Bônus #5</strong> 100 Perguntas para Fazer no Carro ou Em Casa 🚗
+        </h3>
+        <p class="bonus-card-desc">
+          Diga adeus ao silêncio no trânsito ou na mesa do jantar. Puxadores de conversa criativos e profundos que edificam a fé e aproximam ainda mais pais e filhos.
+        </p>
+        <div class="bonus-price-pill">
+          <span>Valor: <span class="old-price">R$39</span> <strong>GRÁTIS</strong></span>
+        </div>
+      </div>
+
+      <!-- BÔNUS #6 -->
+      <div class="bonus-card-new">
+        <div class="bonus-card-img">
+          <img src="carta_compromisso.webp" alt="Modelo de Oração e Cartão de Compromisso da Família">
+        </div>
+        <h3 class="bonus-card-title">
+          <strong>🎁 Bônus #6</strong> Modelo de Oração &amp; Cartão de Compromisso da Família 🙏
+        </h3>
+        <p class="bonus-card-desc">
+          Palavras certas e guiadas por Deus para orar pela vida dos filhos em cada fase, acompanhado de um símbolo visível do pacto de amor e dedicação da sua casa com Deus.
+        </p>
+        <div class="bonus-price-pill">
+          <span>Valor: <span class="old-price">R$39</span> <strong>GRÁTIS</strong></span>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+
+<!-- INVESTIMENTO / PLANOS -->
+<section class="pricing-sec-new" id="oferta">
+  <div class="wrap">
+    <div style="text-align: center;">
+      <div class="pricing-alert-pill">⏰ ÚLTIMA CHANCE — OFERTA TERMINA HOJE</div>
+    </div>
+    <h2 class="pricing-main-title">
+      Escolha o Melhor <span class="blue-hl">Plano para Você!</span>
+    </h2>
+    <hr class="pricing-sep-line">
+
+    <div class="plans-grid-new">
+      <!-- PLANO BÁSICO -->
+      <div class="plan-card-new">
+        <h3 class="plan-card-title">Plano Básico</h3>
+
+        <div class="plan-card-img-wrap">
+          <img src="capa_site.webp" alt="Plano Básico">
+        </div>
+
+        <ul class="plan-features-list">
+          <li>
+            <span class="f-icon yes">✓</span>
+            <span><strong>90 Dias com Meu Filho</strong> – Desafio Completo de 90 Dias</span>
+          </li>
+          <li class="off">
+            <span class="f-icon no">❗️</span>
+            <span>Bônus #1: Guia dos Pais Pensadores</span>
+          </li>
+          <li class="off">
+            <span class="f-icon no">❗️</span>
+            <span>Bônus #2: Manual de Erros Comuns que Enfraquecem a Fé Infantil</span>
+          </li>
+          <li class="off">
+            <span class="f-icon no">❗️</span>
+            <span>Bônus #3: Guia de Transição: Dos 14 para os 18 Anos</span>
+          </li>
+          <li class="off">
+            <span class="f-icon no">❗️</span>
+            <span>Bônus #4: Playlist de Louvor Para Ouvir Juntos 🎵</span>
+          </li>
+          <li class="off">
+            <span class="f-icon no">❗️</span>
+            <span>Bônus #5: 100 Perguntas para Fazer no Carro ou Em Casa 🚗</span>
+          </li>
+          <li class="off">
+            <span class="f-icon no">❗️</span>
+            <span>Bônus #6: Modelo de Oração &amp; Cartão de Compromisso da Família 🙏</span>
+          </li>
+          <li>
+            <span class="f-icon yes">✓</span>
+            <span>Garantia incondicional de 90 dias</span>
+          </li>
+        </ul>
+
+        <div class="plan-old-price">de R$47,00 por:</div>
+        <div class="plan-big-price">R$9,90</div>
+        <div class="plan-installments">Pagamento único · Acesso imediato</div>
+        <div class="plan-savings-badge">
+          <span class="green-dot">●</span>
+          <span>Você economiza <strong>R$37,10</strong></span>
+        </div>
+
+        <a href="https://pay.hotmart.com/G106847214P?checkoutMode=10&bid=1784803927533" class="plan-cta-button">
+          GARANTIR A BASE DA FÉ DO MEU FILHO AGORA
+        </a>
+
+        <div class="plan-yellow-box">
+          <p>92% das pessoas aproveitam a oferta abaixo:</p>
+          <div class="arrow-down-circle">↓</div>
+        </div>
+      </div>
+
+      <!-- PLANO COMPLETO -->
+      <div class="plan-card-new">
+        <div class="plan-bestseller-badge">⚡ MAIS VENDIDO</div>
+        <div style="margin-top: 6px; margin-bottom: 8px;">
+          <div class="pricing-alert-pill" style="margin-bottom: 6px;">⏰ ÚLTIMA CHANCE — OFERTA TERMINA HOJE</div>
+          <div style="color: #16A34A; font-weight: 700; font-size: 15.5px;">Todos os bônus inclusos</div>
+        </div>
+        <h3 class="plan-card-title">Plano Completo</h3>
+
+        <div class="plan-card-img-wrap">
+          <img src="capa_site.webp" alt="Plano Completo - Todos os Bônus">
+        </div>
+
+        <div class="plan-2x-pill">⚡ 2x mais conteúdos</div>
+
+        <ul class="plan-features-list">
+          <li>
+            <span class="f-icon yes">✓</span>
+            <span><strong>90 Dias com Meu Filho</strong> – Desafio Completo de 90 Dias</span>
+          </li>
+          <li>
+            <span class="f-icon yes">✓</span>
+            <span><strong>Bônus #1</strong> Guia dos Pais Pensadores 🎁</span>
+          </li>
+          <li>
+            <span class="f-icon yes">✓</span>
+            <span><strong>Bônus #2</strong> Manual de Erros Comuns que Enfraquecem a Fé Infantil 🎁</span>
+          </li>
+          <li>
+            <span class="f-icon yes">✓</span>
+            <span><strong>Bônus #3</strong> Guia de Transição: Dos 14 para os 18 Anos 🎁</span>
+          </li>
+          <li>
+            <span class="f-icon yes">✓</span>
+            <span><strong>Bônus #4</strong> Playlist de Louvor Para Ouvir Juntos 🎵 🎁</span>
+          </li>
+          <li>
+            <span class="f-icon yes">✓</span>
+            <span><strong>Bônus #5</strong> 100 Perguntas para Fazer no Carro ou Em Casa 🚗 🎁</span>
+          </li>
+          <li>
+            <span class="f-icon yes">✓</span>
+            <span><strong>Bônus #6</strong> Modelo de Oração &amp; Cartão de Compromisso da Família 🙏 🎁</span>
+          </li>
+          <li>
+            <span class="f-icon yes">✓</span>
+            <span><strong>Acesso vitalício</strong> e atualizações futuras</span>
+          </li>
+          <li>
+            <span class="f-icon yes">✓</span>
+            <span>Garantia incondicional de 90 dias</span>
+          </li>
+        </ul>
+
+        <div class="plan-old-price">de R$97,00 por:</div>
+        <div class="plan-big-price">R$17,90</div>
+        <div class="plan-installments">Pagamento único · Acesso imediato</div>
+        <div class="plan-savings-badge">
+          <span class="green-dot">●</span>
+          <span>Você economiza <strong>R$79,10</strong></span>
+        </div>
+
+        <a href="https://pay.hotmart.com/G106846919E?checkoutMode=10&bid=1784803916220" class="plan-cta-button">
+          GARANTIR A BASE DA FÉ DO MEU FILHO AGORA
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELO GARANTIA 90 DIAS -->
+<section class="guarantee-90-sec">
+  <div class="guarantee-90-wrap">
+    <div class="guarantee-90-badge-wrap">
+      <svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="goldG90" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFE082"/>
+            <stop offset="25%" stop-color="#D4AF37"/>
+            <stop offset="50%" stop-color="#FFF8E1"/>
+            <stop offset="75%" stop-color="#B78628"/>
+            <stop offset="100%" stop-color="#F57F17"/>
+          </linearGradient>
+          <linearGradient id="goldInner90" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFF3C4"/>
+            <stop offset="50%" stop-color="#D4AF37"/>
+            <stop offset="100%" stop-color="#AA771C"/>
+          </linearGradient>
+          <linearGradient id="navyG90" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#0F2042"/>
+            <stop offset="100%" stop-color="#060C18"/>
+          </linearGradient>
+          <path id="topArc90" d="M 31,120 A 89,89 0 0,1 209,120" />
+          <path id="botArc90" d="M 209,120 A 89,89 0 0,1 31,120" />
+          <g id="starburst90">
+            <rect x="18" y="18" width="204" height="204" rx="8" fill="url(#goldG90)" transform="rotate(0 120 120)" />
+            <rect x="18" y="18" width="204" height="204" rx="8" fill="url(#goldG90)" transform="rotate(15 120 120)" />
+            <rect x="18" y="18" width="204" height="204" rx="8" fill="url(#goldG90)" transform="rotate(30 120 120)" />
+            <rect x="18" y="18" width="204" height="204" rx="8" fill="url(#goldG90)" transform="rotate(45 120 120)" />
+            <rect x="18" y="18" width="204" height="204" rx="8" fill="url(#goldG90)" transform="rotate(60 120 120)" />
+            <rect x="18" y="18" width="204" height="204" rx="8" fill="url(#goldG90)" transform="rotate(75 120 120)" />
+          </g>
+        </defs>
+        <use href="#starburst90" />
+        <circle cx="120" cy="120" r="102" fill="url(#goldG90)" />
+        <circle cx="120" cy="120" r="76" fill="url(#navyG90)" />
+        <circle cx="120" cy="120" r="74" fill="none" stroke="url(#goldInner90)" stroke-width="1.5" opacity="0.7" />
+        <text font-family="'Arial Black', 'Impact', sans-serif" font-size="12.5" font-weight="900" fill="#060C18" letter-spacing="1">
+          <textPath href="#topArc90" startOffset="50%" text-anchor="middle">SATISFAÇÃO GARANTIDA</textPath>
+        </text>
+        <text font-family="'Arial Black', 'Impact', sans-serif" font-size="12.5" font-weight="900" fill="#060C18" letter-spacing="1">
+          <textPath href="#botArc90" startOffset="50%" text-anchor="middle">SEU DINHEIRO DE VOLTA</textPath>
+        </text>
+        <text x="26" y="125" font-size="14" fill="#060C18" text-anchor="middle">★</text>
+        <text x="214" y="125" font-size="14" fill="#060C18" text-anchor="middle">★</text>
+        <text x="120" y="118" font-family="'Georgia', 'Times New Roman', serif" font-size="66" font-weight="700" fill="url(#goldG90)" text-anchor="middle">90</text>
+        <text x="120" y="156" font-family="'Georgia', 'Times New Roman', cursive, serif" font-style="italic" font-size="34" font-weight="700" fill="url(#goldG90)" text-anchor="middle">Dias</text>
+      </svg>
+    </div>
+
+    <h2 class="guarantee-90-title">Garantia de 90 dias</h2>
+    <p class="guarantee-90-text">
+      Você tem 90 dias para testar a metodologia. Se por algum motivo você perceber que não é para você, nós devolvemos integralmente o seu investimento, sem questionamentos.
+    </p>
   </div>
 </section>
 
@@ -1030,153 +2557,6 @@
   </div>
 </section>
 
-<!-- BONUS -->
-<section class="bonus">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="sec-tab">✍️🎁 Para apoiar você nesse caminho</span>
-      <h2 class="sec-title">Você também recebe 5 bônus para nunca caminhar sozinho 🤝</h2>
-    </div>
-
-    <div class="bonus-grid">
-      <div class="bonus-card punch">
-        <div class="bonus-photo">
-          <img src="capa_playlist.webp" alt="Playlist de louvor" style="width:100%; height:auto; mix-blend-mode: multiply;">
-        </div>
-        <div>
-          <span class="bonus-num">Bônus 01</span>
-          <h4>Playlist de louvor para ouvir juntos 🎵</h4>
-          <p>Seleção especial de músicas cristãs para fortalecer a fé durante a viagem ou em casa.</p>
-          <div class="price-row"><span class="price-old">de R$29</span><span class="price-free">Por R$0,00</span></div>
-        </div>
-      </div>
-      
-      <div class="bonus-card punch">
-        <div class="bonus-photo">
-          <img src="capa_perguntas.webp" alt="100 perguntas" style="width:100%; height:auto; mix-blend-mode: multiply;">
-        </div>
-        <div>
-          <span class="bonus-num">Bônus 02</span>
-          <h4>100 perguntas para fazer no carro 🚗</h4>
-          <p>Diga adeus ao silêncio no trânsito. Puxadores de conversa criativos que edificam.</p>
-          <div class="price-row"><span class="price-old">de R$39</span><span class="price-free">Por R$0,00</span></div>
-        </div>
-      </div>
-      
-      <div class="bonus-card punch">
-        <div class="bonus-photo">
-          <img src="capa_modelo_oracao.webp" alt="Modelo de oração" style="width:100%; height:auto; mix-blend-mode: multiply;">
-        </div>
-        <div>
-          <span class="bonus-num">Bônus 03</span>
-          <h4>Modelo de oração por idade do filho 🙏</h4>
-          <p>Palavras certas e guiadas por Deus para orar pela vida do seu filho em cada fase.</p>
-          <div class="price-row"><span class="price-old">de R$47</span><span class="price-free">Por R$0,00</span></div>
-        </div>
-      </div>
-      
-      <div class="bonus-card punch">
-        <div class="bonus-photo">
-          <img src="carta_compromisso.webp" alt="Cartão de compromisso" style="width:100%; height:auto; mix-blend-mode: multiply;">
-        </div>
-        <div>
-          <span class="bonus-num">Bônus 04</span>
-          <h4>Cartão de compromisso da família 📜</h4>
-          <p>Um símbolo visível do pacto de amor e dedicação de vocês com Deus e a família.</p>
-          <div class="price-row"><span class="price-old">de R$19</span><span class="price-free">Por R$0,00</span></div>
-        </div>
-      </div>
-      
-      <div class="bonus-card punch">
-        <div class="bonus-photo">
-          <img src="capa_checklist.webp" alt="Checklist" style="width:100%; height:auto; mix-blend-mode: multiply;">
-        </div>
-        <div>
-          <span class="bonus-num">Bônus 05</span>
-          <h4>Checklist de progresso ✅</h4>
-          <p>Acompanhe e celebre cada pequeno passo diário na construção do vínculo.</p>
-          <div class="price-row"><span class="price-old">de R$19</span><span class="price-free">Por R$0,00</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bonus-total">
-      <div class="lbl">Valor total dos bônus:</div>
-      <div class="old">R$153</div>
-      <div class="free-badge">🙏 Hoje: sem custo</div>
-      <div class="note">Inclusos para quem começa os 90 dias agora.</div>
-    </div>
-  </div>
-</section>
-
-<!-- PLANOS -->
-<section class="planos" id="oferta">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="sec-tab">🔑 Um pequeno investimento, um grande recomeço</span>
-      <h2 class="sec-title" style="display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap;">Escolha como você quer começar <img src="capa_produto_principal.webp" alt="" style="height:1.6em; width:auto; transform:rotate(4deg); mix-blend-mode: multiply;"></h2>
-      <p class="sec-lede">Selecione o formato ideal para dar o primeiro passo hoje 🏃‍♂️ — não amanhã.</p>
-    </div>
-
-    <div class="plans-grid">
-      <div class="plan-card punch">
-        <div class="plan-name">Caminho Básico</div>
-        <div class="plan-price"><span class="old">R$47</span><span class="new" style="color:var(--ink);">R$9,90</span></div>
-        <span class="plan-terms" style="color:var(--text-dim); background:var(--cream-deep);">Pagamento único</span>
-
-        <ul class="plan-list">
-          <li><span class="li-mark">✓</span>90 Dias com Meu Filho (desafio completo)</li>
-          <li class="off"><span class="li-mark off">×</span>Playlist de louvor para ouvir juntos</li>
-          <li class="off"><span class="li-mark off">×</span>100 perguntas para fazer no carro</li>
-          <li class="off"><span class="li-mark off">×</span>Modelo de oração por idade do filho</li>
-          <li class="off"><span class="li-mark off">×</span>Cartão de compromisso da família</li>
-          <li class="off"><span class="li-mark off">×</span>Checklist de progresso</li>
-          <li><span class="li-mark">✓</span>7 dias para sentir a diferença</li>
-        </ul>
-
-        <a href="#" onclick="event.preventDefault(); document.getElementById('upsellModal').style.display='flex';" class="btn outline block" style="border-color:var(--ink); box-shadow:4px 4px 0 var(--ink);">Quero este caminho</a>
-      </div>
-
-      <div class="plan-card featured punch">
-        <span class="approved">Mais escolhido</span>
-        <div class="plan-name">Caminho Completo</div>
-        <div class="plan-price"><span class="old">R$97</span><span class="new">R$17,90</span></div>
-        <span class="plan-terms">Pagamento único · Acesso imediato</span>
-
-        <ul class="plan-list">
-          <li><span class="li-mark">✓</span>90 Dias com Meu Filho (desafio completo)</li>
-          <li><span class="li-mark">✓</span>Playlist de louvor <span class="tag">BÔNUS</span></li>
-          <li><span class="li-mark">✓</span>100 perguntas para o carro <span class="tag">BÔNUS</span></li>
-          <li><span class="li-mark">✓</span>Modelo de oração por idade <span class="tag">BÔNUS</span></li>
-          <li><span class="li-mark">✓</span>Cartão de compromisso <span class="tag">BÔNUS</span></li>
-          <li><span class="li-mark">✓</span>Checklist de progresso <span class="tag">BÔNUS</span></li>
-          <li><span class="li-mark">✓</span>Acesso vitalício</li>
-          <li><span class="li-mark">✓</span>7 dias para sentir a diferença</li>
-        </ul>
-
-        <a href="https://pay.hotmart.com/G106846919E?checkoutMode=10&bid=1784803916220" class="btn block">Quero começar hoje →</a>
-        <div class="plan-cta-note">Condição de lançamento por mais <span id="btnClock">03:10</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GARANTIA -->
-<section class="garantia">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="sec-tab">🛡️ Sem risco para dar o primeiro passo</span>
-    </div>
-    <div class="guarantee-box">
-      <div class="guarantee-badge"><b>7</b><span>dias sem<br>risco 🛡️</span></div>
-      <div>
-        <h3>Sem risco para dar o primeiro passo</h3>
-        <p>Você tem <strong>7 dias completos</strong> para sentir se isso está fazendo diferença em casa. Se não sentir, devolvemos 100% do valor — sem perguntas, sem burocracia.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="faq">
   <div class="wrap">
@@ -1208,7 +2588,7 @@
       </details>
       <details class="faq-item punch">
         <summary>Por quanto tempo tenho acesso? <span class="faq-mark">+</span></summary>
-        <p>No Caminho Completo, o acesso é vitalício. Você pode repetir qualquer trecho do desafio sempre que sentir necessidade.</p>
+        <p>No Plano Completo, o acesso é vitalício. Você pode repetir qualquer trecho do desafio sempre que sentir necessidade.</p>
       </details>
     </div>
   </div>
@@ -1292,6 +2672,24 @@
     });
   });
 
+  // Promo countdown timer
+  let totalSecs = 14 * 60 + 59;
+  setInterval(() => {
+    if (totalSecs > 0) {
+      totalSecs--;
+      const mins = Math.floor(totalSecs / 60);
+      const secs = totalSecs % 60;
+      const minEl = document.getElementById('promo-min');
+      const secEl = document.getElementById('promo-sec');
+      if (minEl && secEl) {
+        minEl.textContent = String(mins).padStart(2, '0');
+        secEl.textContent = String(secs).padStart(2, '0');
+      }
+    } else {
+      totalSecs = 14 * 60 + 59;
+    }
+  }, 1000);
+
   // FAQ logic
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
@@ -1311,10 +2709,10 @@
   <div class="modal-content punch" style="background:var(--paper); padding:40px; max-width:500px; width:100%; border:2px solid var(--ink); box-shadow:8px 8px 0 var(--ink); position:relative; margin:auto; border-radius:14px;">
     <button onclick="document.getElementById('upsellModal').style.display='none'" style="position:absolute; top:15px; right:15px; font-size:24px; font-weight:bold; color:var(--text-dim);">&times;</button>
     <h3 style="font-family:var(--font-display); font-weight:600; font-size:32px; color:var(--red); margin-bottom:12px; line-height:1;">Antes de você ir</h3>
-    <p style="font-size:16px; color:var(--text-dim); margin-bottom:24px; line-height:1.6; font-weight:500;">Leve o <strong>Caminho Completo</strong> (com todos os bônus) por apenas <strong style="color:var(--ink); font-size:22px;">R$13,90</strong> em vez de <span style="text-decoration:line-through;">R$17,90</span> — para começar hoje.</p>
+    <p style="font-size:16px; color:var(--text-dim); margin-bottom:24px; line-height:1.6; font-weight:500;">Leve o <strong>Plano Completo</strong> (com todos os bônus) por apenas <strong style="color:var(--ink); font-size:22px;">R$13,90</strong> em vez de <span style="text-decoration:line-through;">R$17,90</span> — para começar hoje.</p>
     
     <a href="https://pay.hotmart.com/G106846919E?off=nxmdm0wu&checkoutMode=10&bid=1784803921429" class="btn block" style="margin-bottom:16px; width:100%;">Sim, quero começar por R$13,90</a>
-    <a href="https://pay.hotmart.com/G106847214P?checkoutMode=10&bid=1784803927533" style="display:block; text-align:center; font-family:var(--font-stamp); font-size:13px; font-weight:700; color:var(--text-dim); text-decoration:underline;">Prefiro continuar com o Caminho Básico por R$9,90.</a>
+    <a href="https://pay.hotmart.com/G106847214P?checkoutMode=10&bid=1784803927533" style="display:block; text-align:center; font-family:var(--font-stamp); font-size:13px; font-weight:700; color:var(--text-dim); text-decoration:underline;">Prefiro continuar com o Plano Básico por R$9,90.</a>
   </div>
 </div>
 
