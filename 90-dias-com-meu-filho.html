@@ -868,38 +868,42 @@
     max-width: 320px;
   }
 
-  /* ===== BLOCO SÉRIE DESCOBRINDO O PORQUÊ DA FÉ ===== */
+  /* ===== BLOCO DE DESTAQUE DO PRODUTO COMPLETO ===== */
   .serie-block-sec {
     background: #FFFFFF;
     padding: 68px 0 76px;
   }
   .serie-card {
-    background: #182F58;
+    background: var(--cream);
     border-radius: 32px;
-    padding: 38px 28px 36px;
-    max-width: 580px;
+    padding: 42px 32px 38px;
+    max-width: 640px;
     margin: 0 auto;
-    box-shadow: 0 20px 48px rgba(24, 47, 88, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow);
+    border: 2px solid var(--line);
   }
   .serie-alert-badge {
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    border-radius: 12px;
-    padding: 14px 18px;
+    background: rgba(92, 110, 82, 0.15);
+    border: 1px solid var(--olive);
+    border-radius: 999px;
+    padding: 12px 20px;
     text-align: center;
-    margin-bottom: 26px;
+    margin-bottom: 24px;
+    display: inline-block;
   }
   .serie-alert-badge span {
-    color: #FFFFFF;
+    color: var(--olive-dark);
     font-family: var(--font-body);
-    font-size: clamp(17px, 4.3vw, 20px);
-    font-weight: 600;
+    font-size: clamp(16px, 4.1vw, 19px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
   }
   .serie-title {
     font-family: var(--font-display);
     font-size: clamp(26px, 7.2vw, 36px);
     font-weight: 800;
-    color: #FFFFFF;
+    color: var(--ink);
     line-height: 1.18;
     text-align: center;
     margin: 0 0 28px;
@@ -907,8 +911,9 @@
   .serie-image-box {
     background: #FFFFFF;
     border-radius: 24px;
-    padding: 20px;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+    padding: 24px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--line);
     margin-bottom: 32px;
   }
   .serie-image-box img {
@@ -919,24 +924,26 @@
     border-radius: 14px;
   }
   .serie-subtitle {
-    color: #D1DCEE;
+    color: var(--ink);
     font-family: var(--font-body);
-    font-size: 17px;
-    font-weight: 600;
+    font-size: 19px;
+    font-weight: 800;
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
   .serie-checklist {
     display: flex;
     flex-direction: column;
+    max-width: 480px;
+    margin: 0 auto;
   }
   .serie-check-item {
     display: flex;
     align-items: flex-start;
     gap: 12px;
     padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    color: #FFFFFF;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
     font-family: var(--font-body);
     font-size: clamp(17px, 4.3vw, 19px);
     font-weight: 600;
@@ -946,46 +953,50 @@
     border-bottom: none;
   }
   .serie-check-icon {
-    color: #22c55e;
+    color: var(--olive);
     font-size: 20px;
     font-weight: 900;
     flex-shrink: 0;
     margin-top: 1px;
   }
   .serie-urgency-text {
-    color: #FFFFFF;
+    color: var(--ink);
     font-family: var(--font-body);
     font-size: clamp(17px, 4.4vw, 20px);
     line-height: 1.4;
     text-align: center;
     margin: 28px auto 26px;
-    max-width: 440px;
+    max-width: 460px;
   }
   .serie-cta-btn {
     width: 100%;
-    background: #EA580C;
+    max-width: 460px;
+    background: var(--terra);
     color: #FFFFFF;
     padding: 20px 24px;
-    border-radius: 12px;
+    border-radius: 14px;
     font-family: var(--font-stamp);
     font-size: clamp(16px, 4.2vw, 18px);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.02em;
     text-align: center;
-    display: inline-block;
-    box-shadow: 0 10px 24px rgba(234, 88, 12, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 6px 6px 0 var(--ink);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   .serie-cta-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(234, 88, 12, 0.45);
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 var(--ink);
   }
   .serie-email-note {
-    color: #D1DCEE;
-    font-family: var(--font-body);
-    font-size: 14px;
-    font-weight: 500;
+    color: var(--olive);
+    font-family: var(--font-stamp);
+    font-size: 15px;
+    font-weight: 700;
     text-align: center;
     margin-top: 18px;
   }
@@ -1705,7 +1716,7 @@
   </div>
 </section>
 
-<!-- BLOCO SÉRIE DESCOBRINDO O PORQUÊ DA FÉ -->
+<!-- BLOCO DE DESTAQUE DO PRODUTO COMPLETO -->
 <section class="serie-block-sec">
   <div class="wrap">
     <div class="serie-card">
@@ -1713,10 +1724,10 @@
         <span>🚨 Oferta Limitada Apenas Hoje</span>
       </div>
 
-      <h2 class="serie-title">Série "Descobrindo o Porquê da Fé" – 52 semanas de teologia sistemática para crianças</h2>
+      <h2 class="serie-title">90 devocionais para pais e filhos — Um tempo diário de fé, diálogo e conexão com Deus</h2>
 
       <div class="serie-image-box">
-        <img src="capa_site.png" alt="Série Descobrindo o Porquê da Fé">
+        <img src="capa_site.png" alt="90 devocionais para pais e filhos">
       </div>
 
       <p class="serie-subtitle">Seus filhos terão:</p>
@@ -1741,10 +1752,10 @@
       </div>
 
       <p class="serie-urgency-text">
-        Essa oferta está disponível para as <strong>proximas 7 famílias.</strong> Depois disso, o preço será ajustado.
+        Essa oferta está disponível para as <strong>próximas 7 famílias.</strong> Depois disso, o preço será ajustado.
       </p>
 
-      <a href="#oferta" class="btn serie-cta-btn">GARANTIR ACESSO COM DESCONTO</a>
+      <a href="#planos" class="btn serie-cta-btn">GARANTIR ACESSO COM DESCONTO</a>
 
       <p class="serie-email-note">Você recebe tudo na hora, direto no seu 📩 e-mail</p>
     </div>
